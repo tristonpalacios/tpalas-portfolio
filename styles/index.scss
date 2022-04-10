@@ -1,0 +1,25 @@
+// Example: override to give us a salmon body background
+
+
+:root {
+    --navy: #18181E;
+    --gold: #ffE797;
+    --white: #ffffff;
+  }
+
+$body-bg: #18181E;
+
+$primary: #ffE797;
+$danger: #ff4136;
+
+.navbar-toggler-icon{
+    background-color: #ffE797;
+}
+
+
+
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
+
