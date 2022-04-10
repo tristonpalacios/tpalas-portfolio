@@ -147,3 +147,25 @@ a {
   border-radius: 20px;
   padding: auto;
 }
+
+.overflow-hidden{
+  overflow: hidden;
+  border-radius: 20px;
+  border: 1px none solid;
+}
+.darkBackground{
+  background-color: #18181E;
+}
+
+.textCenter{
+  text-align: center;
+}
+.paddingButton{
+  padding: 10px;
+}
+
+.varButton{
+  background-color: #18181E;
+  color:var(--gold) !important;
+  border: #18181E;
+}

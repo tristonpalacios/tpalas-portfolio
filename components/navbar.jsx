@@ -3,6 +3,7 @@ import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
 import Image from 'next/image'
+import { Button } from "react-bootstrap";
 
 export default function Nbar(){
     return(
@@ -28,6 +29,10 @@ export default function Nbar(){
             <Nav.Link className="text-underline-hover" href="contact" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="text-underline-hover" href="about" id= "myNavItem">About</Nav.Link>
           </Nav>
+          <Button ><a href="/TJP resume.pdf" download="my resume">
+          Résumé
+        </a></Button>
+          
         </Navbar.Collapse>
       </Navbar>
         
