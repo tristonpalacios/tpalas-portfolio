@@ -173,7 +173,7 @@ export default function About() {
                 <h1 className="card-title">Party People</h1>
                 <p className="card-text">React.js , MongoDB, Mapbox </p>
                 <h3 className="card-text">
-                Are you a party person? Have you ever been at home and wondered where the party's at? Well, we got the solution for you! Welcome to Party People! The website where you can see the best parties near you. And if none of them interest you, you can create your own event!
+                Are you a party person? Have you ever been at home and wondered where the party is at? Well, we got the solution for you! Welcome to Party People! The website where you can see the best parties near you. And if none of them interest you, you can create your own event!
                 </h3>
                 <span>
                 <Button><Link href='https://party-people-app.netlify.app/'>Check it out!</Link></Button>

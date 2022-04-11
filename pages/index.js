@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className={styles.main}>
         <h1>Top of the morning!</h1>
-        <h1>I'm Triston Palacios.</h1>
+        <h1>I am Triston Palacios.</h1>
         <h1>A Software Engineer</h1>
         
         

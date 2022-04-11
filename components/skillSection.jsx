@@ -9,7 +9,7 @@ import Card from "react-bootstrap/Card";
 export default function SkillSection(){
     return(
         <>
-        <h1 className="white text-center">I'm the man for projects including:</h1>
+        <h1 className="white text-center">Elegant With:</h1>
       <div className="skillSection">
         
         <Card className="skillCard">
