@@ -1,6 +1,6 @@
 // import SSE caching image tag
 import styles from "../styles/About.module.css";
-import Image from "next/image";
+import { Image } from "react-bootstrap";
 import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
 import Link from "next/link";
 
@@ -31,6 +31,7 @@ export default function About() {
                     alt="Picture of the Monica the Mole"
                     width={500}
                     height={500}
+                    thumbnail
                   />
                 </Carousel.Item>
                 <Carousel.Item>
@@ -231,7 +232,7 @@ export default function About() {
       >
         Art Gallery
       </div>
-      <div className="row">
+      <div className="row ">
         <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
         <Image
             src="/Sloth.png"
@@ -239,23 +240,28 @@ export default function About() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
-        <Image
+         
+         <Image
             src="/abstractDog.png"
             alt="Abstract Dog"
             width={600}
             height={400}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
+        
         <Image
             src="/Tac the Tic.png"
             alt="Abstract Dog"
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/notSus.png"
@@ -263,7 +269,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4 darkBackground overflow-hidden"
+            className="w-100 shadow-1-strong rounded mb-4 darkBackground overflow-hidden border-3 border-white"
+            thumbnail
           />
 
           <Image
@@ -272,7 +279,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/me.png"
@@ -280,7 +288,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-4 border-white"
+            thumbnail
           />
           <Image
             src="/Tom the toe.png"
@@ -288,7 +297,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/ViridisPanda.png"
@@ -296,7 +306,8 @@ export default function About() {
             width={800}
             height={800}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/Render.jpg"
@@ -304,7 +315,8 @@ export default function About() {
             width={800}
             height={800}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/MaskMock.png"
@@ -312,7 +324,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
         </div>
 
@@ -323,7 +336,8 @@ export default function About() {
             width={600}
             height={900}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           
           <Image
@@ -332,7 +346,8 @@ export default function About() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
 
           <Image
@@ -341,7 +356,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/BanditRun.png"
@@ -349,7 +365,8 @@ export default function About() {
             width={500}
             height={300}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/Synct.JPG"
@@ -357,7 +374,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/health.gif"
@@ -365,7 +383,8 @@ export default function About() {
             width={500}
             height={300}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/Cactus.JPG"
@@ -373,7 +392,8 @@ export default function About() {
             width={500}
             height={800}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/AnimalFarm.png"
@@ -381,7 +401,8 @@ export default function About() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/GraveStone.png"
@@ -389,7 +410,8 @@ export default function About() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
         </div>
 
@@ -400,7 +422,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white "
+            thumbnail
           />
           <Image
             src="/Room.gif"
@@ -408,7 +431,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
 
           <Image
@@ -417,7 +441,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
 
           <Image
@@ -426,15 +451,16 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
           />
            <Image
             src="/Flowers.png"
             alt="Viridis Flower Pot"
-            width={500}
-            height={600}
+            height={60}
             quality="100"
-            className="w-100 h-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
+            style={{ height: 500}}
           />
           <Image
             src="/Shady.png"
@@ -442,7 +468,8 @@ export default function About() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/Beanstalk.png"
@@ -450,7 +477,8 @@ export default function About() {
             width={600}
             height={900}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/Wind.gif"
@@ -458,7 +486,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
           <Image
             src="/SantaAndFoggy.png"
@@ -466,7 +495,8 @@ export default function About() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 shadow-1-strong rounded mb-4"
+            className="w-100 shadow-1-strong rounded mb-4 border-3 border-white"
+            thumbnail
           />
         </div>
       </div>

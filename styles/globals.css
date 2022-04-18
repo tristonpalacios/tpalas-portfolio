@@ -114,8 +114,8 @@ a {
     z-index: -1;
     height: 100%;
     width: 100%;
-    transform: scale(.95) translateZ(0);
-    filter: blur(25px);
+    transform: scale(.9) translateZ(0);
+    filter: blur(50px);
     background: linear-gradient(
       to left,
       #ffE797,

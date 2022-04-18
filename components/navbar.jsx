@@ -29,7 +29,7 @@ export default function Nbar(){
             <Nav.Link className="text-underline-hover" href="contact" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="text-underline-hover" href="about" id= "myNavItem">About</Nav.Link>
           </Nav>
-          <Button ><a href="/TJP resume.pdf" download="my resume">
+          <Button ><a href="/TJP resume.pdf" download="Palacios Resume">
           Résumé
         </a></Button>
           
