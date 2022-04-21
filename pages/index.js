@@ -21,7 +21,7 @@ export default function Home() {
       <main >
     
         <Image
-                    src="/HomeHead.png"
+                    src="/Home.png"
                     alt="Picture of the Monica the Mole"
                     width={2400}
                     height={954}
