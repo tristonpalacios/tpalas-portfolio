@@ -18,11 +18,16 @@ export default function Home() {
         <meta name="TJP portfolio" content="Triston Palacios Portfolio Site" />
         <link rel="icon" href="/lg.png" />
       </Head>
-      <main className={styles.main}>
-        <h1>Top of the morning!</h1>
-        <h1>I am Triston Palacios.</h1>
-        <h1>A Software Engineer</h1>
-        
+      <main >
+    
+        <Image
+                    src="/HomeHead.png"
+                    alt="Picture of the Monica the Mole"
+                    width={2400}
+                    height={954}
+                    quality={100}
+                    priority
+                  />
         
       </main>
       <SkillSection/>
