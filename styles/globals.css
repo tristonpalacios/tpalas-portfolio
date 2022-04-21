@@ -1,20 +1,29 @@
 /* THis file is applied to all pages */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@600;900&display=swap');
+
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: 'Titillium Web', sans-serif;
 }
+
 
 
 :root {
   --navy: #18181E;
-  --gold: #ffE797;
-  --white: #ffffff;
+  --gold: #f6dc35;
+  --SuperNova: #ffc500;
+  --LightBlue: #1a7ebf;
+  --Pom: #ef5454;
+  --green:#3e9f42;
 }
-
+.MainApp{
+background-image: url("/PortfolioBack.png");
+background-repeat: repeat-y;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -22,35 +31,42 @@ a {
 
 * {
   box-sizing: border-box;
-  font-family: 'Playfair Display', serif;
+
+  font-family: 'Titillium Web', serif;
 }
-
-
-
-.text-underline-hover{
-  color: white !important;
-  position: relative;
-}
-
-/* .text-underline-hover:hover {
-  text-decoration: underline;
-  text-decoration-color: var(--gold);
-} */
 
 .text-underline-hover:hover {
-  color: var(--gold) !important;
+  color: var(--Pom) !important;
+  background-color: white;
+  border: white 1px solid;
+  box-shadow: 10px 5px 5px var(--Pom);
 }
-.text-underline-hover::before {
-  content: "";
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 2px;
-  bottom: 0;
-  left: 0;
-  background-color: var(--gold);
-  transform: scaleX(0);
-  transition: transform 0.3s ease;
+
+
+.text-underline-hover {
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  color: white !important;
+  border: var(--Pom) 1px solid;
+  border-radius: 10%;
+  background-color: var(--Pom);
+  margin: 10px;
+  font-family: 'Titillium Web', sans-serif;
+  box-shadow: 5px 2.5px 2.5px black;
+  text-shadow: 1px 1px 2px black;
+  border:1px solid #222;
+  box-shadow:3px 3px 0 #222;
+  
+}
+
+.text-underline-hover:hover, .text-underline-hover:focus, .text-underline-hover:active {
+  -webkit-transform: scale(1.1) rotate(4deg);
+  transform: scale(1.1) rotate(4deg);
 }
 
 .text-underline-hover:hover::before {
@@ -58,8 +74,7 @@ a {
 }
 
 .nav{
-  background-color: #18181E;
-  color: #ffE797;
+  background-color: none;
 }
 
 .white{
@@ -169,3 +184,72 @@ a {
   color:var(--gold) !important;
   border: #18181E;
 }
+
+
+.galleryPhotoOne{ 
+  opacity: 1;
+  cursor: pointer;
+  border: var(--green) 25px solid;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+.galleryPhotoTwo{ 
+  opacity: 1;
+  cursor: pointer;
+  border: var(--Pom) 25px solid;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+}
+.galleryPhotoThree{ 
+  opacity: 1;
+  cursor: pointer;
+  border: var(--SuperNova) 25px solid;
+  border-width: 5px 3px 3px 5px;
+  border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
+  transform: rotate(2deg);
+}
+.galleryPhotoFour{ 
+  opacity: 1;
+  cursor: pointer;
+  border: var(--LightBlue) 25px solid;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+  transform: rotate(2deg);
+}
+.galleryPhotoFive{ 
+  opacity: 1;
+  cursor: pointer;
+  border: black 25px solid;
+  border-width: 3px 3px 5px 5px;
+  border-radius:4% 95% 6% 95%/95% 4% 92% 5%;
+  transform: rotate(-2deg);
+  
+}
+.galleryPhotoOne:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.galleryPhotoTwo:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.galleryPhotoThree:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.galleryPhotoFour:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.galleryPhotoFive:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+
+.galleryTitle{
+padding: 0;
+margin: 0;
+}
+

@@ -14,15 +14,17 @@ function MyApp({ Component, pageProps }) {
    <meta name="viewport" content="width=device-width, initial-scale=1" />
    
     </Head>   
-  <Nbar/>
  
-  <main>
+ 
+  <main className='MainApp'>
+  <Nbar/>
   <Component {...pageProps} />
-  </main>
-  <br/>
-<footer className='text-center gold'>
+  <footer className='text-center '>
   ©T.J.P. {new Date().getFullYear()}
 </footer>
+  </main>
+
+
   </>)
 }
 

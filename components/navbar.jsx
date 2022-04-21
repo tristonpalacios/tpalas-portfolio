@@ -16,22 +16,16 @@ export default function Nbar(){
             
         // </nav>
         <Navbar className="nav" bg="none" expand="lg" id="myNavbar">
-        <Navbar.Brand href="#home"><Image
-        src={'/lg.png'}
-        alt="TJP logo"
-        width={70}
-        height={70}
-        /></Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="ml-auto" id="myNavItem">
+          <Nav className="container-fluid" id="myNavItem">
             <Nav.Link className="text-underline-hover" href="/" id="myNavItem">Home</Nav.Link>
-            <Nav.Link className="text-underline-hover" href="contact" id= "myNavItem">Contact</Nav.Link>
+            
             <Nav.Link className="text-underline-hover" href="about" id= "myNavItem">About</Nav.Link>
+            <Nav.Link className="text-underline-hover" href="gallery" id= "myNavItem">Gallery</Nav.Link>
+            <Nav.Link className="text-underline-hover" href="contact" id= "myNavItem">Contact</Nav.Link>
+            <Nav.Link className="text-underline-hover ms-auto" href="/TJP resume.pdf" id= "myNavItem">Resume</Nav.Link>
           </Nav>
-          <Button ><a href="/TJP resume.pdf" download="Palacios Resume">
-          Résumé
-        </a></Button>
           
         </Navbar.Collapse>
       </Navbar>
