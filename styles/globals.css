@@ -45,17 +45,13 @@ a {
 
 
 .text-underline-hover {
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-property: transform;
   transition-property: transform;
   color: white !important;
   border: var(--Pom) 1px solid;
   background-image: url("/RedComic.png");
   margin: 10px;
   font-family: 'Titillium Web', serif;
+  font-weight: 900;
   font-size: 35px;
   box-shadow: 5px 2.5px 2.5px black;
   text-shadow: 1px 1px 2px black;
@@ -74,6 +70,23 @@ a {
 .text-underline-hover:hover::before {
   transform: scaleX(1);
 }
+.subheading {
+  transition-property: transform;
+  color: white !important;
+  border: var(--Pom) 1px solid;
+  background-image: url("/RedComic.png");
+  margin: 10px;
+  font-family: 'Titillium Web', serif;
+  font-weight: 900;
+  font-size: 35px;
+  box-shadow: 5px 2.5px 2.5px black;
+  text-shadow: 1px 1px 2px black;
+  border:1px solid #222;
+  box-shadow:3px 3px 0 #222;
+  border-width: 3px 4px 3px 5px;
+  border-radius:95% 4% 92% 5%/4% 95% 6% 95%;
+}
+
 
 .nav{
   background-color: none;
@@ -207,7 +220,7 @@ a {
 .galleryPhotoThree{ 
   opacity: 1;
   cursor: pointer;
-  border: var(--SuperNova) 25px solid;
+  border: var(--Pom) 25px solid;
   border-width: 5px 3px 3px 5px;
   border-radius:95% 4% 97% 5%/4% 94% 3% 95%;
   transform: rotate(2deg);
@@ -255,3 +268,11 @@ padding: 0;
 margin: 0;
 }
 
+.BoldFont{
+  font-family: 'Titillium Web', serif;
+  font-weight: 900;
+}
+
+.StandardFont{
+  font-family: 'Titillium Web', serif;
+}
