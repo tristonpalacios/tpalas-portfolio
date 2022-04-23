@@ -104,16 +104,6 @@ a {
   color: var(--navy);
 }
 
-.cardFont{
-  font-size: 2rem;
-}
-
-.cardImg{
-  width: 200px;
-  height: 200px;
-  margin: auto;
-  padding: auto;
-}
 .skillSection{
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(210px, auto));
@@ -171,26 +161,29 @@ a {
     background-position: 200% 50%;
   }
 }
-.ProjectImage{
-  width: 100%;
-  height: 48vh;
-  
-}
+
 .ProjectCard{
   margin: 20px;
   border-radius: 20px;
 
   box-shadow: 5px 5px 10px black;
   border: black 5px solid;
+  background-color: white;
 
   
 }
 
 .PhotoArea{
-  height: 750px;
-  overflow: hidden;
-  border-radius: px;
+  border-radius: 5px;
   border: 1px none solid;
+}
+
+.ProjectImage{
+height: 741px;
+width: 100%;
+overflow: hidden;
+border-radius: 5px;
+border: 1px none solid; 
 }
 
 
