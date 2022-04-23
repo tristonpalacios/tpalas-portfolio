@@ -2,7 +2,7 @@ import Link from "next/link";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 import React from "react";
-import Image from "next/image";
+import { Image } from "react-bootstrap";
 import { Button } from "react-bootstrap";
 
 export default function Footer() {
@@ -14,7 +14,7 @@ export default function Footer() {
     //     </Link> */}
 
     // </nav>
-    <Navbar className="Footer" bg="none" expand="lg" id="myNavbar">
+    <Navbar className="Footer" id="myNavbar">
         <Nav className="container-fluid" id="myNavItem">
         <Nav.Link
             className="FooterLink StandardFont"
@@ -26,7 +26,7 @@ export default function Footer() {
           <Nav.Link
             className="FooterLink ms-auto "
             href="https://github.com/tristonpalacios"
-            id="myNavItem"
+            id="GitHub Link"
           >
             <Image
               src="/gitHubIcon.webp"
@@ -34,12 +34,12 @@ export default function Footer() {
               width={50}
               height={50}
               quality="100"
-            />{" "}
+            />
           </Nav.Link>
           <Nav.Link
             className="FooterLink"
             href="https://www.linkedin.com/in/tristonpalacios/"
-            id="myNavItem"
+            id="LinkedIn Link"
           >
             <Image
               src="/linkedIn.png"

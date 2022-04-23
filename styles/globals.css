@@ -171,7 +171,11 @@ a {
     background-position: 200% 50%;
   }
 }
-
+.ProjectImage{
+  width: 100%;
+  height: 48vh;
+  
+}
 .ProjectCard{
   margin: 20px;
   border-radius: 20px;
@@ -182,11 +186,24 @@ a {
   
 }
 
+.PhotoArea{
+  height: 500px;
+  overflow: hidden;
+  border-radius: px;
+  border: 1px none solid;
+}
+.PhotoArea{
+  height: 750px;
+  overflow: hidden;
+  border-radius: px;
+  border: 1px none solid;
+}
+
 
 
 .overflow-hidden{
   overflow: hidden;
-  border-radius: 20px;
+  border-radius: 10px;
   border: 1px none solid;
 }
 .darkBackground{
@@ -201,7 +218,7 @@ a {
 }
 
 .varButton{
-  background-color: var(--LightBlue);
+  background-color: black;
   color:white;
   border: #18181E;
 }
@@ -323,9 +340,23 @@ margin: 0;
   width: 95%;
   margin-top: 20px;
   border: #18181E solid 5px;
-  border-radius: 3%;
+  border-radius: 2%;
   box-shadow: 5px 5px 10px black;
 
+}
+
+@media screen and (max-width: 800px)  {
+  .SkillCard{
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    grid-template-rows: repeat(7, auto);
+    width: 95%;
+    margin-top: 20px;
+    border: #18181E solid 5px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px black;
+  
+  }
 }
 
 .SkillBoxOne {

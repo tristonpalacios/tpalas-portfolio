@@ -19,7 +19,7 @@ export default function Projects() {
           style={{ width: "90%" }}
         >
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 ">
               <Carousel variant="dark">
                 <Carousel.Item>
                   <Image
@@ -41,7 +41,7 @@ export default function Projects() {
                   <Image
                     src="/Whack.png"
                     alt="Picture of WaM game board"
-                    width={700}
+                    width={500}
                     height={500}
                     quality="100"
                     className="overflow-hidden"
@@ -53,7 +53,7 @@ export default function Projects() {
               <div className="card-body">
                 <h1 className="card-title">Whack-a-Mole!</h1>
                 <p className="card-text"><Image
-                    src="/jsLogo.png"
+                    src="/jslogo.png"
                     alt="JavaScript"
                     width={70}
                     height={50}
@@ -71,7 +71,7 @@ export default function Projects() {
                 height={50}
               />
               <Image
-                src="/git.png"
+                src="/Git.png"
                 alt="Git Hub"
                 width={50}
                 height={50}
@@ -89,7 +89,7 @@ export default function Projects() {
                   <li>Complex Win/Lose Logic</li>
                   <li>Easter Egg</li>
                 </ul>
-                <Button>
+                <Button className="varButton">
                   <Link href="https://tristonpalacios.github.io/WaM/">
                     Check it out!
                   </Link>
@@ -157,7 +157,7 @@ export default function Projects() {
                   <li>Fully Implemted User Auth System, including data encryption</li>
                   <li>PostgreSQL implementation</li>
                 </ul>
-                  <Button>
+                  <Button className="varButton">
                     <Link href="https://virtual-marvel-encyclopedia.herokuapp.com/users/new">
                       Check it out!
                     </Link>
@@ -172,7 +172,7 @@ export default function Projects() {
                   </span>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 PhotoArea">
                 <Carousel variant="dark">
                   <Carousel.Item>
                     <Image
@@ -181,7 +181,7 @@ export default function Projects() {
                       width={600}
                       height={600}
                       quality="100"
-                      className="overflow-hidden"
+                      className="overflow-hidden ProjectImage"
                    
                     />
                   </Carousel.Item>
@@ -192,7 +192,7 @@ export default function Projects() {
                       width={600}
                       height={600}
                       quality="100"
-                      className="overflow-hidden"
+                      className="overflow-hidden ProjectImage"
                      
                     />
                   </Carousel.Item>
@@ -200,10 +200,9 @@ export default function Projects() {
                     <Image
                       src="/VMELS.png"
                       alt="VME Search Page"
-                      width={600}
-                      height={600}
+    
                       quality="100"
-                      className="overflow-hidden"
+                      className="overflow-hidden ProjectImage"
                      
                     />
                   </Carousel.Item>
@@ -217,36 +216,32 @@ export default function Projects() {
           style={{ width: "90%" }}
         >
           <div className="row">
-            <div className="col-md-6">
+            <div className="col-md-6 PhotoArea">
               <Carousel variant="dark">
-                <Carousel.Item className="rounded-0">
+                <Carousel.Item >
                   <Image
                     src="/PP.gif"
                     alt="Party People Logo"
-                    width={600}
-                    height={600}
-                    className="darkBackground overflow-hidden"
-                    thumbnail
+                    className=" darkBackground overflow-hidden ProjectImage"
                   />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item >
                   <Image
                     src="/hype.gif"
                     alt="Picture of the Farmer Joe"
                     width={600}
                     height={600}
-                    className="darkBackground overflow-hidden"
-                    thumbnail
+                    className=" darkBackground overflow-hidden ProjectImage"
                   />
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item >
                   <Image
                     src="/pphome.png"
                     alt="Picture of WaM game board"
                     width={600}
                     height={600}
-                    quality="100"
-                    className="overflow-hidden"
+                    className=" darkBackground overflow-hidden ProjectImage"
+                    
           
                   />
                 </Carousel.Item>
@@ -296,7 +291,7 @@ export default function Projects() {
                   <li>Mongoose DB</li>
                 </ul>
                 <span>
-                  <Button>
+                  <Button className="varButton">
                     <Link href="https://party-people-app.netlify.app/">
                       Check it out!
                     </Link>
@@ -318,7 +313,7 @@ export default function Projects() {
           style={{ width: "90%" }}
         >
             <div className="row">
-              <div className="col-md-6">
+              <div className="col-md-6 ">
                 <div className="card-body">
                   <h1 className="card-title">Petit Ami</h1>
                   {/* <p className="card-text">
@@ -362,7 +357,7 @@ export default function Projects() {
                   <li>Complex conditional logic to dictate happiness and evolution of Ami</li>
                   <li>Petit Ami is fully functional, but still in active devolpment and awaiting launch on the Apple App Store, stay tuned for more updates! </li>
                 </ul>
-                  <Button>
+                  <Button className="varButton">
                     <Link href="https://virtual-marvel-encyclopedia.herokuapp.com/users/new">
                       Check it out!
                     </Link>
@@ -377,16 +372,16 @@ export default function Projects() {
                   </span>
                 </div>
               </div>
-              <div className="col-md-6">
+              <div className="col-md-6 PhotoArea">
                 <Carousel variant="dark">
                   <Carousel.Item>
                     <Image
                       src="/Petit Ami Mock Up.png"
                       alt="Virtual Marvel Encyclopedia sign in"
-                      width={640}
+                      width={700}
                       height={700}
                       quality="100"
-                      className="overflow-hidden"
+                      className="ProjectImage"
                    
                     />
                   </Carousel.Item>
@@ -397,7 +392,7 @@ export default function Projects() {
                       width={700}
                       height={700}
                       quality="100"
-                      className="overflow-hidden"
+                      className="ProjectImage"
                      
                     />
                   </Carousel.Item>
@@ -405,11 +400,8 @@ export default function Projects() {
                     <Image
                       src="/BabySleep.gif"
                       alt="VME Search Page"
-                      width={700}
-                      height={700}
                       quality="100"
-                      className="overflow-hidden ProjectImage"
-                     
+                      className="ProjectImage"
                     />
                   </Carousel.Item>
                 </Carousel>
