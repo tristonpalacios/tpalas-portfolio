@@ -333,11 +333,7 @@ export default function Projects() {
                   more updates!{" "}
                 </li>
               </ul>
-              <Button className="varButton">
-                <Link href="https://virtual-marvel-encyclopedia.herokuapp.com/users/new">
-                  Check it out!
-                </Link>
-              </Button>
+        
 
               <span className="paddingButton">
                 <Button className="varButton">
