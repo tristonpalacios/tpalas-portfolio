@@ -104,16 +104,16 @@ export default function Skills(){
       </Card>
       <Card className="SkillBoxFive overflow-hidden">
         <h1 className="Bangers CenterText">Notes:</h1>
-        <ul>
-            <li>Can Code Whole Programs in a single Key Stroke</li>
-            <li>Is Currently Reading 
-            <ul>
-                <li> For Whom the Bell Tolls</li>
-                <li> Grokking Algorithms</li>
-                <li> Creativity, Inc.</li>
+        <ul className="Bangers">
+            <li className="Bangers">Can Code Whole Programs in a single Key Stroke</li>
+            <li className="Bangers">Is Currently Reading 
+            <ul className="Bangers">
+                <li className="Bangers"> For Whom the Bell Tolls</li>
+                <li className="Bangers"> Grokking Algorithms</li>
+                <li className="Bangers"> Creativity, Inc.</li>
             </ul>
             </li>
-            <li> Is a lifetime student, and is likely trying to learn something new ay you read this.</li>
+            <li className="Bangers"> Is a lifetime student, and is likely trying to learn something new as you read this.</li>
         </ul>
       </Card>
     </Card>

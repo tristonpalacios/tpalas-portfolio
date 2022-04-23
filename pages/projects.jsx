@@ -221,7 +221,7 @@ export default function Projects() {
               <Carousel variant="dark">
                 <Carousel.Item className="rounded-0">
                   <Image
-                    src="/pp.gif"
+                    src="/PP.gif"
                     alt="Party People Logo"
                     width={600}
                     height={600}
