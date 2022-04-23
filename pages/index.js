@@ -32,13 +32,13 @@ export default function Home() {
                     quality={100}
                     priority
                   />
-      <SkillSection/>
+      {/* <SkillSection/> */}
         
       </main>
       <div id="about">
       <About />
       <Skills/>
-      
+
       </div>
       
       <div id="projects">

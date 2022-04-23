@@ -15,8 +15,6 @@ export default function Footer() {
 
     // </nav>
     <Navbar className="Footer" bg="none" expand="lg" id="myNavbar">
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
-      <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="container-fluid" id="myNavItem">
         <Nav.Link
             className="FooterLink StandardFont"
@@ -30,7 +28,6 @@ export default function Footer() {
             href="https://github.com/tristonpalacios"
             id="myNavItem"
           >
-            {" "}
             <Image
               src="/gitHubIcon.webp"
               alt="Github Link"
@@ -46,7 +43,7 @@ export default function Footer() {
           >
             <Image
               src="/linkedIn.png"
-              alt="Linked In Link"
+              alt="LinkedIn Link"
               width={50}
               height={50}
               quality="100"
@@ -65,9 +62,7 @@ export default function Footer() {
               quality="100"
             />
           </Nav.Link>
-          
         </Nav>
-      </Navbar.Collapse>
     </Navbar>
   );
 }
