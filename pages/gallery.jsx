@@ -23,11 +23,11 @@ export default function Contact() {
 
     let images = [
         {
-            url:"/Sloth.png",
+            url:"/SlothPic.png",
             title:"Sloth Viridis Ad"
         },
         {
-            url:"/abstractDog.png",
+            url:"/AbstractDog.png",
             title:"Abstract Dog"
         },
         {
@@ -78,7 +78,7 @@ export default function Contact() {
             title:"Bandit Run Starting Screen"
         },
         {
-            url:"/Synct.jpg",
+            url:"/SynctLogo.jpg",
             title:"Synct Logo"
         },
         {
@@ -86,7 +86,7 @@ export default function Contact() {
             title:"3 hearts WaM gif"
         },
         {
-            url:"/Cactus.jpg",
+            url:"/CactusOwl.jpg",
             title:"Virdis Cactus Sticker"
         },
         {
@@ -110,7 +110,7 @@ export default function Contact() {
             title:"Camelback Carwash Logo"
         },
         {
-            url:"/sunnySide.png",
+            url:"/SunnySide.png",
             title:"SunnySide Logo"
         },
         {
@@ -150,7 +150,7 @@ export default function Contact() {
     <div className="row">
       <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
           <Image
-            src="/Sloth.png"
+            src="/SlothPic.png"
             alt="Viridis Sloth"
             width={500}
             height={600}
@@ -212,7 +212,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(5); handleShow();}}
           />
           <Image
-            src="/Tom the toe.png"
+            src="/Tom the Toe.png"
             alt="Tom the toe"
             width={600}
             height={600}
@@ -297,7 +297,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(13); handleShow();}}
           />
           <Image
-            src="/Synct.jpg"
+            src="/SynctLogo.jpg"
             alt="Synct Logo"
             width={500}
             height={500}
@@ -317,7 +317,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(15); handleShow();}}
           />
           <Image
-            src="/Cactus.jpg"
+            src="/CactusOwl.jpg"
             alt="Cactus on Owl"
             width={500}
             height={800}
@@ -381,7 +381,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/sunnySide.png"
+            src="/SunnySide.png"
             alt="Sunny Side Logo"
             width={500}
             height={500}
