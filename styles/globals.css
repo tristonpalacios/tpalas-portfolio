@@ -187,12 +187,6 @@ a {
 }
 
 .PhotoArea{
-  height: 500px;
-  overflow: hidden;
-  border-radius: px;
-  border: 1px none solid;
-}
-.PhotoArea{
   height: 750px;
   overflow: hidden;
   border-radius: px;
