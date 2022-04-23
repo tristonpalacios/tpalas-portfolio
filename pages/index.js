@@ -1,11 +1,6 @@
 import Head from "next/head";
 import Image from "next/image";
-import styles from "../styles/Home.module.css";
-import Navbar from "../components/navbar";
 import { useEffect } from "react";
-import { Container,Button } from "react-bootstrap";
-import Card from "react-bootstrap/Card";
-import SkillSection from "../components/skillSection";
 import Projects from "./projects";
 import About from "./about";
 import Nbar from "../components/navbar";

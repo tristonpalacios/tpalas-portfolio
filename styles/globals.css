@@ -451,6 +451,7 @@ font-family: 'Bangers', cursive;
 .CenterText {
   justify-content: center;
   margin: auto;
+  text-align: center;
 }
 
 #projects{

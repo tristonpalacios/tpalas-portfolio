@@ -11,7 +11,7 @@ export default function Skills(){
         <>
     <Card className="SkillCard mx-auto">
       <Card className="SkillBoxOne overflow-hidden">
-        <h1 className="Bangers CenterText ">Alias: The Software Arist </h1>
+        <h1 className="Bangers CenterText ">Alias: The Software Artist </h1>
         </Card>
       <Card className="SkillBoxTwo overflow-hidden">
           <h1 className="Bangers CenterText ">Composite:</h1>
@@ -28,11 +28,10 @@ export default function Skills(){
       <h1 className="Bangers CenterText">Known Information:</h1>
       
         <h2 className="Bangers" >
-        Raised in Las Vegas, Triston learned a thing or two about how to stand out amongst other bright lights.
-       
+        Triston Palacios is an Software Engineer and Artist who is an extreme danger to any coding bugs or uninspired projects that dare step in his path. Our reports indicate that in his previous life, before taking up the superhero alias of <b> THE FANTASTIC SOFTWARE-ARTIST</b> he was a Program Director who used his client first mindset and methodical approach to lead his teams to achieve the impossible time and time again! Nowadays Triston has been seen whipping up exciting projects and refining his Software Engineering skillset.
         <br />
         <br />
-        Triston Palacios is Software Engineer and Artist who is looking to lend his superpowers to a team making a difference. In his previous life before taking up the superhero mantle of <b> THE FANTASTIC SOFTWARE-ARTIST</b> he was a Program Director who leveraged his client first mindset to elvate his program to heights never before imagined!
+        Recent sightings of the Software Artist indicate that he is currently freelancing and looking for new opportunities to make something great!
         </h2>
         </Card>
       <Card className="SkillBoxFour overflow-hidden">
@@ -41,63 +40,63 @@ export default function Skills(){
         <Image
             src="/REACT.png"
             alt="React"
-            width={60}
+            width={70}
           />
         </div>
         <div className="SuperPowerTwo">
         <Image
             src="/Swift.png"
             alt="Swift"
-            width={60}
+            width={70}
           />
         </div>
         <div className="SuperPowerThree">
         <Image
             src="/pyLg.png"
             alt="Python"
-            width={60}
+            width={70}
           />
         </div>
         <div className="SuperPowerFour">
         <Image
             src="/Realm.svg"
             alt="Node.js"
-            width={60}
+            width={70}
           />
         </div>
         <div className="SuperPowerFive">
         <Image
             src="/postgreSQL.png"
             alt="Python"
-            width={60}
+            width={70}
           />
         </div>
         <div className="SuperPowerSix">
         <Image
             src="/mongoDb.jpeg"
             alt="MongoDb"
-            width={100}
+            width={120}
           />
         </div>
         <div className="SuperPowerSeven">
         <Image
             src="/Node.png"
             alt="Python"
-            width={50}
+            width={70}
           />
         </div>
         <div className="SuperPowerEight">
         <Image
             src="/Dj.png"
             alt="Python"
-            width={50}
+            width={70}
           />
         </div>
         <div className="SuperPowerNine">
         <Image
             src="/Office.png"
             alt="Python"
-            width={50}
+            width={70}
           />
         </div>
        
