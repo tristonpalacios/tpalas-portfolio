@@ -3,7 +3,7 @@ import { Image } from "react-bootstrap";
 import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
 import Link from "next/link";
 
-export default function Contact() {
+export default function Projects() {
 
     return(
         <>
@@ -27,7 +27,6 @@ export default function Contact() {
                     alt="Picture of the Monica the Mole"
                     width={500}
                     height={500}
-                    thumbnail
                   />
                 </Carousel.Item>
                 <Carousel.Item>
@@ -107,11 +106,10 @@ export default function Contact() {
           </div>
         </div>
 
-        <div className="ProjectCard">
-          <div
-            className="card ProjectCard mx-auto justify-content-center"
-            style={{ width: "90%" }}
-          >
+        <div
+          className="card ProjectCard mx-auto justify-content-center"
+          style={{ width: "90%" }}
+        >
             <div className="row">
               <div className="col-md-6">
                 <div className="card-body">
@@ -270,9 +268,9 @@ export default function Contact() {
                   width={50}
                   height={50}
                 /> <Image
-                src="/Mapbox.png"
-                alt="MapBox"
-                width={75}
+                src="/postman.webp"
+                alt="Postman"
+                width={50}
                 height={50}
               />
               <Image
@@ -315,12 +313,10 @@ export default function Contact() {
             </div>
           </div>
         </div>
-      </div>
-      <div className="ProjectCard">
-          <div
-            className="card ProjectCard mx-auto justify-content-center"
-            style={{ width: "90%" }}
-          >
+      <div
+          className="card ProjectCard mx-auto justify-content-center"
+          style={{ width: "90%" }}
+        >
             <div className="row">
               <div className="col-md-6">
                 <div className="card-body">
@@ -387,7 +383,7 @@ export default function Contact() {
                     <Image
                       src="/Petit Ami Mock Up.png"
                       alt="Virtual Marvel Encyclopedia sign in"
-                      width={630}
+                      width={640}
                       height={700}
                       quality="100"
                       className="overflow-hidden"
@@ -398,7 +394,7 @@ export default function Contact() {
                     <Image
                       src="/TeenEat.gif"
                       alt="VME results page"
-                      width={600}
+                      width={700}
                       height={700}
                       quality="100"
                       className="overflow-hidden"
@@ -409,10 +405,10 @@ export default function Contact() {
                     <Image
                       src="/BabySleep.gif"
                       alt="VME Search Page"
-                      width={600}
+                      width={700}
                       height={700}
                       quality="100"
-                      className="overflow-hidden"
+                      className="overflow-hidden ProjectImage"
                      
                     />
                   </Carousel.Item>
@@ -420,7 +416,6 @@ export default function Contact() {
               </div>
             </div>
           </div>
-        </div>
         </>
     )
 

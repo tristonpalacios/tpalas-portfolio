@@ -5,7 +5,7 @@ import React from "react";
 import Image from 'next/image'
 import { Button } from "react-bootstrap";
 
-export default function Nbar(){
+export default function GalleryNbar(){
     return(
         // <nav>
         //     {/* <Link href='/'> Home </Link>
@@ -21,10 +21,7 @@ export default function Nbar(){
           <Nav className="container-fluid" id="myNavItem">
             <Nav.Link className="text-underline-hover" href="/" id="myNavItem">Home</Nav.Link>
             
-            <Nav.Link className="text-underline-hover" href="#about" id= "myNavItem">About</Nav.Link>
-            <Nav.Link className="text-underline-hover" href="#projects" id= "myNavItem">Projects</Nav.Link>
-            <Nav.Link className="text-underline-hover" href="gallery" id= "myNavItem">Gallery</Nav.Link>
-            <Nav.Link className="text-underline-hover ms-auto" href="/TJP resume.pdf" id= "myNavItem">Resume</Nav.Link>
+
             
           </Nav>
           

@@ -6,6 +6,10 @@ import { useEffect } from "react";
 import { Container,Button } from "react-bootstrap";
 import Card from "react-bootstrap/Card";
 import SkillSection from "../components/skillSection";
+import Projects from "./projects";
+import About from "./about";
+import Nbar from "../components/navbar";
+import Skills from "../components/Skills";
 
 export default function Home() {
   useEffect(() => {
@@ -19,18 +23,28 @@ export default function Home() {
         <link rel="icon" href="/lg.png" />
       </Head>
       <main >
-    
+      <Nbar/>
         <Image
-                    src="/Home.png"
-                    alt="Picture of the Monica the Mole"
+                    src="/HomePagePhoto.png"
+                    alt="Comic Rendition of introduction to self"
                     width={2400}
                     height={954}
                     quality={100}
                     priority
                   />
+      <SkillSection/>
         
       </main>
-      <SkillSection/>
+      <div id="about">
+      <About />
+      <Skills/>
+      
+      </div>
+      
+      <div id="projects">
+      <Projects />
+      </div>
+      
      
     </div>
     

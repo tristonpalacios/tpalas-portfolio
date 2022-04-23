@@ -7,17 +7,14 @@ import Link from "next/link";
 export default function About() {
   return (
     <div>
-      <div>
-        <h1 className="white textCenter">About Me:</h1>
-      </div>
 
      
       <div
         className="textCenter
-      white text-underline-hover"
+      white subheading"
       >
         
-        What I am reading
+        Character Sheet
       </div>
       
     </div>

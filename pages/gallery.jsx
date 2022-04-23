@@ -6,6 +6,7 @@ import Lightbox from "react-awesome-lightbox";
 // You need to import the CSS only once
 import "react-awesome-lightbox/build/style.css";
 import Link from "next/link";
+import GalleryNbar from "../components/GalleryNav";
 
 export default function Contact() {
     const [show, setShow] = useState(false);
@@ -134,14 +135,16 @@ export default function Contact() {
         },
     ]
   return (
+    <>
+    <GalleryNbar/>
     <div className="Container">
         <div className="galleryTitle">
-            <Image
+            {/* <Image
             src="/Visions.png"
             alt="Abstract Dog"
             quality="100"
             className="w-100 mb-4" 
-          />
+          /> */}
           </div>
         
     <div className="row ">
@@ -444,6 +447,7 @@ export default function Contact() {
         <Lightbox images={images} startIndex={imgIndex} onClose={handleClose}></Lightbox>
         </Modal>
       </div>
+      </>
      
     
     
