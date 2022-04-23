@@ -139,12 +139,12 @@ export default function Contact() {
     <GalleryNbar/>
     <div className="Container">
         <div className="galleryTitle">
-            {/* <Image
+            <Image
             src="/Visions.png"
             alt="Abstract Dog"
             quality="100"
             className="w-100 mb-4" 
-          /> */}
+          />
           </div>
         
     <div className="row">
