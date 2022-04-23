@@ -147,14 +147,13 @@ export default function Contact() {
           /> */}
           </div>
         
-    <div className="row ">
+    <div className="row">
       <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
           <Image
             src="/Sloth.png"
-            alt="Abstract Dog"
+            alt="Viridis Sloth"
             width={500}
             height={600}
-            quality="100"
             className="w-100 mb-4 galleryPhotoOne"
             onClick={() => { setImgIndex(0); handleShow();}}
             thumbnail
@@ -162,7 +161,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/abstractDog.png"
+            src="/AbstractDog.png"
             alt="Abstract Dog"
             width={600}
             height={400}
@@ -173,7 +172,7 @@ export default function Contact() {
           />
            <Image
             src="/Tac the Tic.png"
-            alt="Abstract Dog"
+            alt="Tac the Tic"
             width={600}
             height={600}
             quality="100"
@@ -256,7 +255,7 @@ export default function Contact() {
         </div>
         <div className="col-lg-4 mb-4 mb-lg-0">
           <Image
-            src="/viridisPoster.png"
+            src="/ViridisPoster.png"
             alt="Viridis Kickstarted Poster"
             width={600}
             height={900}
