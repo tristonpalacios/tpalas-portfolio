@@ -3,7 +3,7 @@ import styles from "../styles/About.module.css";
 import { Image } from "react-bootstrap";
 import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
 import Link from "next/link";
-import Head from 'next/head'
+import Head from "next/head";
 
 export default function ContactForm() {
   const [name, setName] = useState("");
@@ -11,8 +11,11 @@ export default function ContactForm() {
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
+
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setSubmitted(!submitted)
     console.log("Sending");
     let data = {
       name,
@@ -28,6 +31,7 @@ export default function ContactForm() {
       body: JSON.stringify(data),
     }).then((res) => {
       console.log("Response received");
+      console.log(res.status)
       if (res.status === 200) {
         console.log("Response succeeded!");
         setSubmitted(true);
@@ -40,83 +44,93 @@ export default function ContactForm() {
 
   const renderSendButton = () => {
     if (submitted) {
-      return <h1>Submitted</h1>;
-    } else {
       return <div className="card-body ">
-      <h1 className="card-title ContactCardTitle">Send me a signal!</h1>
-      {/* <p className="card-text">
+        
+        <p className="SubmittedMessage mx-auto">Signal Sent!</p>
+        </div>;
+    } else {
+      return (
+        <div className="card-body ">
+          <h1 className="card-title ContactCardTitle">Send me a signal!</h1>
+          {/* <p className="card-text">
             Node.js, Express.js, Marvel API, PostgreSQL
           </p> */}
-     <form className="">
-        <formGroup>
-          <label htmlFor="name" className="inputLabel">Name:</label>
-          <br />
-          <input
-          className="inputField"
-            type="text"
-            onChange={(e) => {
-              setName(e.target.value);
-            }}
-            name="name"
-          />
-        </formGroup>
-        <br />
-        <formGroup>
-          <label htmlFor="email" className="inputLabel">Email:</label>
-          <br />
-          <input
-          className="inputField"
-            type="email"
-            name="email"
-            onChange={(e) => {
-              setEmail(e.target.value);
-            }}
-            placeholder="TJPfan01@email,com"
-          />
-        </formGroup>
-        <br />
-        <formGroup>
-          <label htmlFor="message" className="inputLabel">Message:</label>
-          <br />
-          <textarea className="inputField"
-            type="text"
-            name="message"
-            onChange={(e) => {
-              setMessage(e.target.value);
-            }}
-            style={{ height: 100 , width: 500 }}
-          />
-        </formGroup>
-        <br />
-        <input
-className="SubmitButton"
-type="submit"
-onClick={(e) => {
-  handleSubmit(e);
-}}
-/> 
-      </form>
-      
-    </div>
+          <form className="">
+            <formGroup>
+              <label htmlFor="name" className="inputLabel">
+                Name:
+              </label>
+              <br />
+              <input
+                className="inputField"
+                type="text"
+                onChange={(e) => {
+                  setName(e.target.value);
+                }}
+                name="name"
+              />
+            </formGroup>
+            <br />
+            <formGroup>
+              <label htmlFor="email" className="inputLabel">
+                Email:
+              </label>
+              <br />
+              <input
+                className="inputField"
+                type="email"
+                name="email"
+                onChange={(e) => {
+                  setEmail(e.target.value);
+                }}
+                placeholder="TJPfan01@email,com"
+              />
+            </formGroup>
+            <br />
+            <formGroup>
+              <label htmlFor="message" className="inputLabel">
+                Message:
+              </label>
+              <br />
+              <textarea
+                className="inputField"
+                type="text"
+                name="message"
+                onChange={(e) => {
+                  setMessage(e.target.value);
+                }}
+                style={{ height: 100, width: 500 }}
+              />
+            </formGroup>
+            <br />
+            <input
+              className="SubmitButton"
+              type="submit"
+              onClick={(e) => {
+                handleSubmit(e);
+              }}
+            />
+          </form>
+        </div>
+      );
     }
-  }
+  };
   return (
     <div
       className="card ContactCard mx-auto justify-content-center"
-      style={{ width: "90%" }}>
-        <div className="row">
-          <div className="col-md-6 ContactForm">
-            {renderSendButton()}
-          </div>
-          <div className="col-md-6 PhotoArea">
+      style={{ width: "90%" }}
+    >
+      <div className="row">
+        <div className="col-md-6 ContactForm">{renderSendButton()}</div>
+        <div className="col-md-6 PhotoArea">
           <Image
-                  src="/TJPSignal.png"
-                  alt="Virtual Marvel Encyclopedia sign in"
-                  quality="100"
-                  className="overflow-hidden contactImage "
-                />
-          </div>
+            src="/TJPSignal.png"
+            alt="Virtual Marvel Encyclopedia sign in"
+            quality="100"
+            className="overflow-hidden contactImage "
+          />
         </div>
       </div>
+    </div>
   );
 }

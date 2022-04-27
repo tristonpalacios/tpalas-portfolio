@@ -516,3 +516,10 @@ font-family: 'Bangers', cursive;
 .inputLabel{
   font-size: 25px;
 }
+
+.SubmittedMessage{
+  justify-content: center;
+  text-align: center;
+  font-size: 6rem;
+  padding-top: 20%;
+}
