@@ -13,13 +13,7 @@ function MyApp({ Component, pageProps }) {
       </Head>
 
       <main className="MainApp">
-        
         <Component {...pageProps} />
-       
-        <footer className="text-center BoldFont">
-          ©T.J.P. {new Date().getFullYear()}
-        </footer>
-        <Footer/>
       </main>
     </>
   );

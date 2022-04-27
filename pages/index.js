@@ -5,6 +5,9 @@ import Projects from "./projects";
 import About from "./about";
 import Nbar from "../components/navbar";
 import Skills from "../components/Skills";
+import ContactForm from "../components/ContactForm";
+import Footer from "../components/footer";
+
 
 export default function Home() {
   useEffect(() => {
@@ -38,9 +41,16 @@ export default function Home() {
       
       <div id="projects">
       <Projects />
+      
+      </div>
+      <div>
+      <ContactForm/>        
       </div>
       
-     
+      <footer className="text-center BoldFont">
+          ©T.J.P. {new Date().getFullYear()}
+        </footer>
+        <Footer/>
     </div>
     
   );
