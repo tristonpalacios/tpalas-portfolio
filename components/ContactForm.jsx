@@ -37,68 +37,76 @@ export default function ContactForm() {
       }
     });
   };
+
+  const renderSendButton = () => {
+    if (submitted) {
+      return <h1>Submitted</h1>;
+    } else {
+      return <div className="card-body ">
+      <h1 className="card-title ContactCardTitle">Send me a signal!</h1>
+      {/* <p className="card-text">
+            Node.js, Express.js, Marvel API, PostgreSQL
+          </p> */}
+     <form className="">
+        <formGroup>
+          <label htmlFor="name" className="inputLabel">Name:</label>
+          <br />
+          <input
+          className="inputField"
+            type="text"
+            onChange={(e) => {
+              setName(e.target.value);
+            }}
+            name="name"
+          />
+        </formGroup>
+        <br />
+        <formGroup>
+          <label htmlFor="email" className="inputLabel">Email:</label>
+          <br />
+          <input
+          className="inputField"
+            type="email"
+            name="email"
+            onChange={(e) => {
+              setEmail(e.target.value);
+            }}
+            placeholder="TJPfan01@email,com"
+          />
+        </formGroup>
+        <br />
+        <formGroup>
+          <label htmlFor="message" className="inputLabel">Message:</label>
+          <br />
+          <textarea className="inputField"
+            type="text"
+            name="message"
+            onChange={(e) => {
+              setMessage(e.target.value);
+            }}
+            style={{ height: 100 , width: 500 }}
+          />
+        </formGroup>
+        <br />
+        <input
+className="SubmitButton"
+type="submit"
+onClick={(e) => {
+  handleSubmit(e);
+}}
+/> 
+      </form>
+      
+    </div>
+    }
+  }
   return (
     <div
       className="card ContactCard mx-auto justify-content-center"
       style={{ width: "90%" }}>
         <div className="row">
           <div className="col-md-6 ContactForm">
-            <div className="card-body ">
-              <h1 className="card-title ContactCardTitle">Send me a signal!</h1>
-              {/* <p className="card-text">
-                    Node.js, Express.js, Marvel API, PostgreSQL
-                  </p> */}
-             <form className="">
-                <formGroup>
-                  <label htmlFor="name" className="inputLabel">Name:</label>
-                  <br />
-                  <input
-                  className="inputField"
-                    type="text"
-                    onChange={(e) => {
-                      setName(e.target.value);
-                    }}
-                    name="name"
-                  />
-                </formGroup>
-                <br />
-                <formGroup>
-                  <label htmlFor="email" className="inputLabel">Email:</label>
-                  <br />
-                  <input
-                  className="inputField"
-                    type="email"
-                    name="email"
-                    onChange={(e) => {
-                      setEmail(e.target.value);
-                    }}
-                    placeholder="TJPfan01@email,com"
-                  />
-                </formGroup>
-                <br />
-                <formGroup>
-                  <label htmlFor="message" className="inputLabel">Message:</label>
-                  <br />
-                  <textarea className="inputField"
-                    type="text"
-                    name="message"
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    style={{ height: 100 , width: 500 }}
-                  />
-                </formGroup>
-                <br />
-                <input
-                className="SubmitButton"
-                  type="submit"
-                  onClick={(e) => {
-                    handleSubmit(e);
-                  }}
-                /> 
-              </form>
-              
-            </div>
+            {renderSendButton()}
           </div>
           <div className="col-md-6 PhotoArea">
           <Image
