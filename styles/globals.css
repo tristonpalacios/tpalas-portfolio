@@ -21,12 +21,12 @@ body {
   --Pom: #ef5454;
   --green:#3e9f42;
 }
-/* .MainApp{
+.MainApp{
 
 width: 100%;
 height: 100%;
-background-repeat: repeat-y;
-} */
+justify-content: center;
+}
 a {
   color: inherit;
   text-decoration: none;
@@ -327,24 +327,7 @@ margin: 0;
 
 }
 
-@media (max-width: 1000px)  {
-  .SkillCard{
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: repeat(7, auto);
-    width: 95%;
-    margin-top: 20px;
-    border: #18181E solid 5px;
-    border-radius: 2%;
-    box-shadow: 5px 5px 10px black;
-    
-  
-  }
-  .SkillBoxTwo {
-    display: none;
-  
-  }
-}
+
 
 .SkillBoxOne {
   grid-area:1 / 1 / 2 / 6;
@@ -393,6 +376,10 @@ font-family: 'Bangers', cursive;
   justify-content: center;
   align-content: center;
   margin: auto;
+}
+.skillPhoto{
+  height: 100px;
+  width: 100%;
 }
 .SuperPowerTwo{
   grid-area: 2 / 2 / 3 / 3; 
@@ -522,4 +509,23 @@ font-family: 'Bangers', cursive;
   text-align: center;
   font-size: 6rem;
   padding-top: 20%;
+}
+
+@media (max-width: 1000px)  {
+  .SkillCard{
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: repeat(7, auto);
+    width: 95%;
+    margin-top: 20px;
+    border: #18181E solid 5px;
+    border-radius: 2%;
+    box-shadow: 5px 5px 10px black;
+    
+  
+  }
+  .SkillBoxTwo {
+    display: none;
+  
+  }
 }

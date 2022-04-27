@@ -43,7 +43,7 @@ export default function Home() {
       <Projects />
       
       </div>
-      <div>
+      <div id="ContactForm">
       <ContactForm/>        
       </div>
       

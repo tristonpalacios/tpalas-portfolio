@@ -40,35 +40,35 @@ export default function Skills(){
         <Image
             src="/REACT.png"
             alt="React"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerTwo">
         <Image
             src="/Swift.png"
             alt="Swift"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerThree">
         <Image
             src="/pyLg.png"
             alt="Python"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerFour">
         <Image
             src="/Realm.svg"
             alt="Node.js"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerFive">
         <Image
             src="/postgreSQL.png"
             alt="Python"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerSix">
@@ -82,21 +82,21 @@ export default function Skills(){
         <Image
             src="/Node.png"
             alt="Python"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerEight">
         <Image
             src="/Dj.png"
             alt="Python"
-            width={70}
+            className="skillPhoto"
           />
         </div>
         <div className="SuperPowerNine">
         <Image
             src="/Office.png"
             alt="Python"
-            width={70}
+            className="skillPhoto"
           />
         </div>
        
