@@ -6,7 +6,7 @@ import Lightbox from "react-awesome-lightbox";
 // You need to import the CSS only once
 import "react-awesome-lightbox/build/style.css";
 import Link from "next/link";
-import GalleryNbar from "../components/GalleryNav";
+import GalleryNbar from "../components/comicGalleryNav";
 
 export default function Contact() {
     const [show, setShow] = useState(false);

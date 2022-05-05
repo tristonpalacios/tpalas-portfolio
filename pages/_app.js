@@ -1,11 +1,15 @@
-import Nbar from "../components/navbar";
+import Nbar from "../components/comicNavbar";
 import Head from "next/head";
 import "bootstrap/dist/css/bootstrap.css";
 import "../styles/index.scss"; // Add this line
 import "../styles/globals.css";
-import Footer from "../components/footer";
+import Footer from "../components/comicFooter";
+
 
 function MyApp({ Component, pageProps }) {
+
+ 
+  
   return (
     <>
       <Head>

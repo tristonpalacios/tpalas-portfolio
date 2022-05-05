@@ -5,7 +5,13 @@ import React from "react";
 import Image from 'next/image'
 import { Button } from "react-bootstrap";
 
-export default function Nbar(){
+
+export default function ComicNbar({setComicMode, comicMode}){
+
+      const changeView = () =>{
+        setComicMode(!comicMode)
+      }
+
     return(
         // <nav>
         //     {/* <Link href='/'> Home </Link>
@@ -26,6 +32,7 @@ export default function Nbar(){
             <Nav.Link className="text-underline-hover" href="#ContactForm" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="text-underline-hover" href="gallery" id= "myNavItem">Gallery</Nav.Link>
             <Nav.Link className="text-underline-hover ms-auto" href="/TJP resume.pdf" id= "myNavItem">Resume</Nav.Link>
+            {/* <button onClick={changeView}>Change View</button> */}
             
           </Nav>
           

@@ -1,11 +1,8 @@
 import { useState } from "react";
-import styles from "../styles/About.module.css";
-import { Image } from "react-bootstrap";
-import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
-import Link from "next/link";
-import Head from "next/head";
+import { FormGroup, Image } from "react-bootstrap";
 
-export default function ContactForm() {
+
+export default function AgeContactForm() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
@@ -56,7 +53,7 @@ export default function ContactForm() {
             Node.js, Express.js, Marvel API, PostgreSQL
           </p> */}
           <form className="">
-            <formGroup>
+            <FormGroup>
               <label htmlFor="name" className="inputLabel">
                 Name:
               </label>
@@ -69,9 +66,9 @@ export default function ContactForm() {
                 }}
                 name="name"
               />
-            </formGroup>
+            </FormGroup>
             <br />
-            <formGroup>
+            <FormGroup>
               <label htmlFor="email" className="inputLabel">
                 Email:
               </label>
@@ -85,23 +82,23 @@ export default function ContactForm() {
                 }}
                 placeholder="TJPfan01@email,com"
               />
-            </formGroup>
+            </FormGroup>
             <br />
-            <formGroup>
+            <FormGroup>
               <label htmlFor="message" className="inputLabel">
                 Message:
               </label>
               <br />
               <textarea
-                className="inputField"
+                className="inputTextArea"
                 type="text"
                 name="message"
                 onChange={(e) => {
                   setMessage(e.target.value);
                 }}
-                style={{ height: 100, width: 500 }}
+                style={{ height: 100, width: 200 }}
               />
-            </formGroup>
+            </FormGroup>
             <br />
             <input
               className="SubmitButton"
@@ -125,7 +122,7 @@ export default function ContactForm() {
         <div className="col-md-6 PhotoArea">
           <Image
             src="/TJPSignal.png"
-            alt="Virtual Marvel Encyclopedia sign in"
+            alt="Tjp Signal"
             quality="100"
             className="overflow-hidden contactImage "
           />
