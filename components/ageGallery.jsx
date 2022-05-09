@@ -7,6 +7,7 @@ import Lightbox from "react-awesome-lightbox";
 import "react-awesome-lightbox/build/style.css";
 import Link from "next/link";
 import GalleryNbar from "../components/comicGalleryNav";
+import AgeGalleryNbar from "../components/ageGallerNav";
 
 export default function AgeGallery() {
     const [show, setShow] = useState(false);
@@ -135,17 +136,17 @@ export default function AgeGallery() {
         },
     ]
   return (
-    <>
-    <GalleryNbar/>
+    <div className="AgeGallery">
+    <AgeGalleryNbar/>
     <div className="Container">
-        <div className="galleryTitle">
+        {/* <div className="galleryTitle">
             <Image
             src="/Visions.png"
             alt="Abstract Dog"
             quality="100"
             className="w-100 mb-4" 
           />
-          </div>
+          </div> */}
         
     <div className="row">
       <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
@@ -154,7 +155,7 @@ export default function AgeGallery() {
             alt="Viridis Sloth"
             width={500}
             height={600}
-            className="w-100 mb-4 galleryPhotoOne"
+            className="w-100 mb-4 ageGalleryPhotoOne"
             onClick={() => { setImgIndex(0); handleShow();}}
             thumbnail
             
@@ -166,7 +167,7 @@ export default function AgeGallery() {
             width={600}
             height={400}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(1); handleShow();}}
           />
@@ -176,7 +177,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(2); handleShow();}}
           />
@@ -186,7 +187,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFour"
+            className="w-100 mb-4 ageGalleryPhotoFour"
             thumbnail
             onClick={() => { setImgIndex(3); handleShow();}}
           />
@@ -197,7 +198,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(4); handleShow();}}
           />
@@ -207,7 +208,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoOne"
+            className="w-100 mb-4 ageGalleryPhotoOne"
             thumbnail
             onClick={() => { setImgIndex(5); handleShow();}}
           />
@@ -217,7 +218,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(6); handleShow();}}
           />
@@ -227,7 +228,7 @@ export default function AgeGallery() {
             width={800}
             height={800}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(7); handleShow();}}
           />
@@ -237,7 +238,7 @@ export default function AgeGallery() {
             width={800}
             height={800}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFour"
+            className="w-100 mb-4 ageGalleryPhotoFour"
             thumbnail
             onClick={() => { setImgIndex(8); handleShow();}}
           />
@@ -247,7 +248,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(9); handleShow();}}
           />
@@ -260,7 +261,7 @@ export default function AgeGallery() {
             width={600}
             height={900}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(10); handleShow();}}
           />
@@ -271,7 +272,7 @@ export default function AgeGallery() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFour"
+            className="w-100 mb-4 ageGalleryPhotoFour"
             thumbnail
             onClick={() => { setImgIndex(11); handleShow();}}
           />
@@ -282,7 +283,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(12); handleShow();}}
           />
@@ -292,7 +293,7 @@ export default function AgeGallery() {
             width={500}
             height={300}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(13); handleShow();}}
           />
@@ -302,7 +303,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoOne"
+            className="w-100 mb-4 ageGalleryPhotoOne"
             thumbnail
             onClick={() => { setImgIndex(14); handleShow();}}
           />
@@ -312,7 +313,7 @@ export default function AgeGallery() {
             width={500}
             height={300}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(15); handleShow();}}
           />
@@ -322,7 +323,7 @@ export default function AgeGallery() {
             width={500}
             height={800}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFour"
+            className="w-100 mb-4 ageGalleryPhotoFour"
             thumbnail
             onClick={() => { setImgIndex(16); handleShow();}}
           />
@@ -332,7 +333,7 @@ export default function AgeGallery() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(17); handleShow();}}
           />
@@ -342,7 +343,7 @@ export default function AgeGallery() {
             width={500}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(18); handleShow();}}
           />
@@ -354,7 +355,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(19); handleShow();}}
           />
@@ -364,7 +365,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(20); handleShow();}}
           />
@@ -375,7 +376,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoOne"
+            className="w-100 mb-4 ageGalleryPhotoOne"
             thumbnail
             onClick={() => { setImgIndex(21); handleShow();}}
           />
@@ -386,7 +387,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(22); handleShow();}}
           />
@@ -395,7 +396,7 @@ export default function AgeGallery() {
             alt="Viridis Flower Pot"
             height={60}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFour"
+            className="w-100 mb-4 ageGalleryPhotoFour"
             thumbnail
             onClick={() => { setImgIndex(23); handleShow();}}
           />
@@ -405,7 +406,7 @@ export default function AgeGallery() {
             width={500}
             height={500}
             quality="100"
-            className="w-100 mb-4 galleryPhotoThree"
+            className="w-100 mb-4 ageGalleryPhotoThree"
             thumbnail
             onClick={() => { setImgIndex(24); handleShow();}}
           />
@@ -415,7 +416,7 @@ export default function AgeGallery() {
             width={600}
             height={900}
             quality="100"
-            className="w-100 mb-4 galleryPhotoTwo"
+            className="w-100 mb-4 ageGalleryPhotoTwo"
             thumbnail
             onClick={() => { setImgIndex(25); handleShow();}}
           />
@@ -425,7 +426,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoOne"
+            className="w-100 mb-4 ageGalleryPhotoOne"
             thumbnail
             onClick={() => { setImgIndex(26); handleShow();}}
           />
@@ -435,7 +436,7 @@ export default function AgeGallery() {
             width={600}
             height={600}
             quality="100"
-            className="w-100 mb-4 galleryPhotoFive"
+            className="w-100 mb-4 ageGalleryPhotoFive"
             thumbnail
             onClick={() => { setImgIndex(27); handleShow();}}
           />
@@ -446,7 +447,7 @@ export default function AgeGallery() {
         <Lightbox images={images} startIndex={imgIndex} onClose={handleClose}></Lightbox>
         </Modal>
       </div>
-      </>
+      </div>
      
     
     
