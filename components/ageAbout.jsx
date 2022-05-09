@@ -13,7 +13,7 @@ export default function AgeAbout() {
         <div className="AgeFont">Software engineer and artist</div>
         <div className="AgeFont"><h1> 
           <a href="https://github.com/tristonpalacios">
-                  <Image src="/gitHubWhite.png" alt="HTML" width={50} height={50} />{" "}
+                  <Image src="/GitHubWhite.png" alt="HTML" width={50} height={50} />{" "}
           </a>  
           <a href="https://www.linkedin.com/in/tristonpalacios/">
                   <Image src="/LinkedWhite.png" alt="HTML" width={50} height={50} />{" "}
