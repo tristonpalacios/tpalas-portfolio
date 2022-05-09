@@ -15,11 +15,26 @@ body {
   background-image: url("/PortfolioBack.png");
   width: 100%;
 }
+.Gallery{
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url("/PortfolioBack.png");
+  width: 100%;
+}
 .AgeApp{
   font-family: 'Space Mono', monospace;
   background-color: black;
   border: 5px gold solid;
   width: 100%;
+}
+
+.AgeGallery{
+  font-family: 'Space Mono', monospace;
+  background-color: black;
+  border: 5px gold solid;
+  width: 100%;
+  margin: auto;
+  padding-left: 6vw;
+  padding-right: 6vw;
 }
 .AgeAboutSection{
 display: grid;
@@ -321,6 +336,59 @@ border-radius: 5px;
 }
 
 
+.ageGalleryPhotoOne{ 
+  opacity: 1;
+  cursor: pointer;
+  border: gold 5px solid;
+}
+.ageGalleryPhotoTwo{ 
+  opacity: 1;
+  cursor: pointer;
+  border: gold 8px solid;
+}
+.ageGalleryPhotoThree{ 
+  opacity: 1;
+  cursor: pointer;
+  border: gold 8px solid;
+}
+.ageGalleryPhotoFour{ 
+  opacity: 1;
+  cursor: pointer;
+  border: gold 8px solid;
+
+}
+.ageGalleryPhotoFive{ 
+  opacity: 1;
+  cursor: pointer;
+  border: gold 8px solid;
+
+  
+}
+.ageGalleryPhotoOne:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.ageGalleryPhotoTwo:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.ageGalleryPhotoThree:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.ageGalleryPhotoFour:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+.ageGalleryPhotoFive:hover{ 
+  box-shadow: 10px 5px 5px black; 
+  opacity: 1;
+}
+
+.galleryTitle{
+padding: 0;
+margin: 0;
+}
 .galleryPhotoOne{ 
   opacity: 1;
   cursor: pointer;
@@ -573,6 +641,14 @@ font-family: 'Bangers', 'Comic Neue';
   background-color: white;
   margin-bottom: 100px;
 }
+.AgeContactCard{
+  margin: 20px;
+  border-radius: 20px;
+  border: White 5px solid;
+  background-color: black;
+  color: white !important;
+  margin-bottom: 100px;
+}
 
 .inputForm{
   background-color: #18181E;
@@ -660,4 +736,53 @@ font-family: 'Bangers', 'Comic Neue';
     display: none;
   
   }
+  .AgeAboutPhoto{
+    display: none;
+    
+    
+  }
+
+  .AgeAboutTitle{
+ 
+    color: white;
+    font-family: 'Space Mono', monospace;
+    font-size: 3.5rem;
+    height: 1rem;
+   }
+   
+   .AgeSubHeading{
+     font-family: 'Space Mono', monospace;
+     font-size: 1.5rem;
+     margin: auto;
+     margin-left: 40px;
+   }
+   
+   .AboutTitle{
+     font-family: 'Space Mono', monospace;
+    font-size: 3rem;
+   }
+   
+   .AgeFont{
+     font-family: 'Space Mono', monospace;
+   font-size: 1.5rem;}
+   
+   .AgeAboutBlurb{
+     color: white;
+     font-family: 'Space Mono', monospace;
+   }
+   
+   .AgeAboutLinks{
+
+     color: white;
+     font-family: 'Space Mono', monospace;
+   }
+   .AgeAboutSection{
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    display: block;
+
+    
+    }
+
 }

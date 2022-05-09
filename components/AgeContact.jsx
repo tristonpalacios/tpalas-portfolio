@@ -43,18 +43,18 @@ export default function AgeContactForm() {
     if (submitted) {
       return <div className="card-body ">
         
-        <p className="SubmittedMessage mx-auto">Signal Sent!</p>
+        <p className="SubmittedMessage mx-auto ">Signal Sent!</p>
         </div>;
     } else {
       return (
         <div className="card-body ">
-          <h1 className="card-title ContactCardTitle">Send me a signal!</h1>
+          <h1 className="card-title ContactCardTitle AgeFont">Contact Me.</h1>
           {/* <p className="card-text">
             Node.js, Express.js, Marvel API, PostgreSQL
           </p> */}
           <form className="">
             <FormGroup>
-              <label htmlFor="name" className="inputLabel">
+              <label htmlFor="name" className="inputLabel AgeFont">
                 Name:
               </label>
               <br />
@@ -69,7 +69,7 @@ export default function AgeContactForm() {
             </FormGroup>
             <br />
             <FormGroup>
-              <label htmlFor="email" className="inputLabel">
+              <label htmlFor="email" className="inputLabel AgeFont">
                 Email:
               </label>
               <br />
@@ -80,12 +80,11 @@ export default function AgeContactForm() {
                 onChange={(e) => {
                   setEmail(e.target.value);
                 }}
-                placeholder="TJPfan01@email,com"
               />
             </FormGroup>
             <br />
             <FormGroup>
-              <label htmlFor="message" className="inputLabel">
+              <label htmlFor="message" className="inputLabel AgeFont">
                 Message:
               </label>
               <br />
@@ -101,7 +100,7 @@ export default function AgeContactForm() {
             </FormGroup>
             <br />
             <input
-              className="SubmitButton"
+              className="AgeFont"
               type="submit"
               onClick={(e) => {
                 handleSubmit(e);
@@ -114,14 +113,14 @@ export default function AgeContactForm() {
   };
   return (
     <div
-      className="card ContactCard mx-auto justify-content-center"
+      className="card AgeContactCard mx-auto justify-content-center"
       style={{ width: "90%" }}
     >
       <div className="row">
         <div className="col-md-6 ContactForm">{renderSendButton()}</div>
         <div className="col-md-6 PhotoArea">
           <Image
-            src="/TJPSignal.png"
+            src="/randomart.png"
             alt="Tjp Signal"
             quality="100"
             className="overflow-hidden contactImage "

@@ -8,7 +8,7 @@ import "react-awesome-lightbox/build/style.css";
 import Link from "next/link";
 import GalleryNbar from "../components/comicGalleryNav";
 
-export default function Contact() {
+export default function ageGallery() {
     const [show, setShow] = useState(false);
     const [imgIndex, setImgIndex] = useState(0)
 
@@ -135,7 +135,7 @@ export default function Contact() {
         },
     ]
   return (
-    <div className="Gallery">
+    <>
     <GalleryNbar/>
     <div className="Container">
         <div className="galleryTitle">
@@ -446,7 +446,7 @@ export default function Contact() {
         <Lightbox images={images} startIndex={imgIndex} onClose={handleClose}></Lightbox>
         </Modal>
       </div>
-      </div>
+      </>
      
     
     

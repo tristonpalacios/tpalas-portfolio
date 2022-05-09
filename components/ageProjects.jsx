@@ -14,7 +14,7 @@ export default function AgeProjects() {
           Project Spotlight
         </h1>
         <div
-          className="card AgeProjectCard mx-auto justify-content-center "
+          className="card AgeProjectCard ageFont mx-auto justify-content-center "
           style={{ width: "90%" }}
         >
           <div className="row">
@@ -52,7 +52,7 @@ export default function AgeProjects() {
             </div>
             <div className="col-md-6">
               <div className="card-body">
-                <h1 className="card-title white">Whack-a-Mole!</h1>
+                <h1 className="card-title white ">Whack-a-Mole!</h1>
                 <p className="card-text">
                   <Image
                     src="/jslogo.png"

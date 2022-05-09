@@ -32,7 +32,8 @@ export default function ComicNbar({setComicMode, comicMode}){
             <Nav.Link className="text-underline-hover" href="#ContactForm" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="text-underline-hover" href="gallery" id= "myNavItem">Gallery</Nav.Link>
             <Nav.Link className="text-underline-hover ms-auto" href="/TJP resume.pdf" id= "myNavItem">Resume</Nav.Link>
-            {/* <button onClick={changeView}>Change View</button> */}
+            <Nav.Link className="text-underline-hover " href="ageHome" id= "myNavItem">Dark Mode</Nav.Link>
+          
             
           </Nav>
           

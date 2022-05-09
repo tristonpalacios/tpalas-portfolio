@@ -25,14 +25,15 @@ export default function AgeNbar({setComicMode, comicMode}){
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="container-fluid" id="myNavItem">
-            <Nav.Link className="AgeNav" href="/" id="myNavItem">Home</Nav.Link>
+            <Nav.Link className="AgeNav" href="/ageHome" id="myNavItem">Home</Nav.Link>
             
             <Nav.Link className="AgeNav" href="#about" id= "myNavItem">About</Nav.Link>
             <Nav.Link className="AgeNav" href="#projects" id= "myNavItem">Projects</Nav.Link>
             <Nav.Link className="AgeNav" href="#ContactForm" id= "myNavItem">Contact</Nav.Link>
-            <Nav.Link className="AgeNav" href="gallery" id= "myNavItem">Gallery</Nav.Link>
+            <Nav.Link className="AgeNav" href="agegallery" id= "myNavItem">Gallery</Nav.Link>
             <Nav.Link className="AgeNav ms-auto" href="/TJP resume.pdf" id= "myNavItem">Resume</Nav.Link>
-            <button onClick={changeView}>Change View</button>
+            <Nav.Link className="AgeNav" href="/" id= "myNavItem">Comic Mode</Nav.Link>
+          
             
           </Nav>
           
