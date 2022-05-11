@@ -1,12 +1,25 @@
 import styles from "../styles/About.module.css";
 import { Image } from "react-bootstrap";
 import { Card, Row, Col, Button, Carousel } from "react-bootstrap";
+import { useState, useRef, useEffect } from "react";
 import Link from "next/link";
 
 export default function Projects() {
-  return (
-    <>
-      <div className="Projects">
+  function FadeInSectionOne(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+        ref={domRef}
+      >
+         <div className="Projects">
         <h1
           className="textCenter
       white subheading"
@@ -15,8 +28,7 @@ export default function Projects() {
         </h1>
         <div
           className="card ProjectCard mx-auto justify-content-center"
-          style={{ width: "90%" }}
-        >
+          style={{ width: "90%" }}>
           <div className="row">
             <div className="col-md-6 ">
               <Carousel variant="dark">
@@ -94,11 +106,28 @@ export default function Projects() {
             </div>
           </div>
         </div>
-
+      </div>
+     </div>
+    );
+  }
+  function FadeInSectionTwo(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+        ref={domRef}
+      >
+         <div className="Projects">
         <div
           className="card ProjectCard mx-auto justify-content-center"
-          style={{ width: "90%" }}
-        >
+          style={{ width: "90%" }}>
           <div className="row">
             <div className="col-md-6">
               <div className="card-body">
@@ -193,6 +222,25 @@ export default function Projects() {
           </div>
         </div>
       </div>
+     </div>
+    );
+  }
+  function FadeInSectionThree(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+        ref={domRef}
+      >
+         <div className="Projects">
+      </div>
       <div
         className="card ProjectCard mx-auto justify-content-center"
         style={{ width: "90%" }}
@@ -284,6 +332,25 @@ export default function Projects() {
           </div>
         </div>
       </div>
+     </div>
+    );
+  }
+  function FadeInSectionFour(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+        ref={domRef}
+      >
+         <div className="Projects">
+      </div>
       <div className="ProjectCard mx-auto " style={{ width: "90%" }}>
         <div className="row">
           <div className="col-md-6 ">
@@ -333,7 +400,6 @@ export default function Projects() {
                   more updates!{" "}
                 </li>
               </ul>
-        
 
               <span className="paddingButton">
                 <Button className="varButton">
@@ -378,6 +444,15 @@ export default function Projects() {
           </div>
         </div>
       </div>
+     </div>
+    );
+  }
+  return (
+    <>
+     <FadeInSectionOne/>
+     <FadeInSectionTwo/>
+     <FadeInSectionThree/>
+     <FadeInSectionFour/>
     </>
   );
 }
