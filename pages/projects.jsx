@@ -516,8 +516,8 @@ export default function Projects() {
                   height={50}
                 />{" "}
                 <Image
-                  src="/postman.webp"
-                  alt="Postman"
+                  src="/Node.png"
+                  alt="Node"
                   width={50}
                   height={50}
                 />
