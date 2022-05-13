@@ -474,6 +474,111 @@ export default function AgeProjects() {
       </div>
     );
   }
+  function FadeInSectionFive(props) {
+    const [isVisible, setVisible] = useState(false);
+    const domRef = useRef();
+    useEffect(() => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => setVisible(entry.isIntersecting));
+      });
+      observer.observe(domRef.current);
+    }, []);
+    return (
+      <div
+        className={`fade-in-section ${isVisible ? "is-visible" : ""}`}
+        ref={domRef} >
+        <div className="Projects">
+          
+
+  
+        </div>
+        <div
+          className="card AgeProjectCard mx-auto justify-content-center"
+          style={{ width: "90%" }}
+        >
+          <div className="row">
+            <div className="col-md-6 PhotoArea">
+              <Carousel variant="dark">
+                <Carousel.Item>
+                  <Image
+                    src="/LMS Home.png"
+                    alt="LMS Home Screen"
+                    className=" darkBackground overflow-hidden ProjectImage"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    src="/LMS Figma.png"
+                    alt="LMS Figma File"
+                    width={600}
+                    height={600}
+                    className=" darkBackground overflow-hidden ProjectImage"
+                  />
+                </Carousel.Item>
+                <Carousel.Item>
+                  <Image
+                    src="/LMS Modules.png"
+                    alt="Picture of LMS Module Page"
+                    width={600}
+                    height={600}
+                    className=" darkBackground overflow-hidden ProjectImage"
+                  />
+                </Carousel.Item>
+              </Carousel>
+            </div>
+            <div className="col-md-6">
+              <div className="card-body">
+              <h1 className="card-title white">Unlocking Communities </h1>
+              <h1 className="card-title white">Learning Management System </h1>
+                <p className="card-text">
+                  <Image
+                    src="/REACT.png"
+                    alt="REACT"
+                    width={50}
+                    height={50}
+                    quality="100"
+                  />
+                  <Image
+                    src="/mongoDb.jpeg"
+                    alt="Mongo Db"
+                    width={50}
+                    height={50}
+                  />{" "}
+                  <Image
+                    src="/postman.webp"
+                    alt="Postman"
+                    width={50}
+                    height={50}
+                  />
+                  <Image src="/figma.webp" alt="MapBox" width={50} height={50} />
+                </p>
+                <h3 className="card-text white">
+                Created as part of the 2022 International Hackathon.
+                <br/>
+                The Unlocking Communities LMS was created per Unlocking Communities specifications to help educate their Haitian entrepreneurs within their upcoming Android based app. 
+                </h3>
+                <h3 className="BoldFont white">Project Highlights</h3>
+                <ul>
+                <li className="white">Created in 72 hours utilizing an 8 team SCRUM workflow</li>
+                <li className="white">Fully developed backend heirarchy that allows admis to create modules, lessons, and quizzes.</li>
+                <li className="white">Styled with custom components and react bootstrap</li>
+                <li className="white">Developed as a light weight solution to better suite the unique tech climate of Haiti</li>
+              </ul>
+          
+                <span className="paddingButton">
+                  <Button className="AgeVarButton">
+                    <Link href="https://github.com/UC-Education-Team/ga-uc-education-front-end/blob/develop/README.md">
+                      Github Repo
+                    </Link>
+                  </Button>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <>
@@ -481,6 +586,7 @@ export default function AgeProjects() {
       <FadeInSectionTwo />
       <FadeInSectionThree />
       <FadeInSectionFour />
+      <FadeInSectionFive />
     </>
   );
 }
