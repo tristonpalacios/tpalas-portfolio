@@ -35,7 +35,8 @@ export default function Skills(){
         </h2>
         </Card>
       <Card className="SkillBoxFour overflow-hidden">
-        <h1 className="SuperPowerTitle">Super-Powers:</h1>
+        <h1 className="SuperPowerTitle mx-auto">Super-Powers:</h1>
+       
         <div className="SuperPowerOne">
         <Image
             src="/REACT.png"

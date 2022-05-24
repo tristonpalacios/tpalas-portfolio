@@ -721,14 +721,7 @@ font-family: 'Bangers', 'Comic Neue';
 
 @media (max-width: 1000px)  {
   .SkillCard{
-    display: grid;
-    grid-template-columns: 1;
-    grid-template-rows: repeat(7, auto);
-    width: 95%;
-    margin-top: 20px;
-    border: #18181E solid 5px;
-    border-radius: 2%;
-    box-shadow: 5px 5px 10px black;
+    display: flex
     
   
   }
@@ -738,8 +731,22 @@ font-family: 'Bangers', 'Comic Neue';
   }
   .AgeAboutPhoto{
     display: none;
-    
-    
+  }
+
+ 
+  .SkillBoxFour{
+    grid-row: 4;
+    grid-template-columns: 1/4;
+    height: 20%;
+  }
+  .cardImg{
+    width: 8%;
+    height: 8%;
+    overflow: hidden;
+  }
+
+  .SuperPowerTitle{
+    padding-bottom: 50px;
   }
 
   .AgeAboutTitle{
@@ -784,6 +791,38 @@ font-family: 'Bangers', 'Comic Neue';
 
     
     }
+    .fade-in-section {
+      opacity: 1;
+      transform: translateY(20vh);
+      visibility: hidden;
+      transition: opacity 1200ms ease-out, transform 600ms ease-out,
+        visibility 1200ms ease-out;
+      will-change: opacity, transform, visibility;
+    }
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: none;
+      visibility: visible;
+    }
+    .Footer{
+      background-image: url("/RedComic.png");
+      border-top: black 25px solid;
+      border-width: 3px 3px 5px 5px;
+      text-align: center;
+
+      position: fixed;
+      bottom: 0px;
+      left: 0px;
+      right: 0px;
+     margin: auto;
+    
+    }
+
+    .email{
+      display: none;
+    }
+
+   
 
 }
 

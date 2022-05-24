@@ -17,7 +17,7 @@ export default function Footer() {
     <Navbar className="Footer" id="myNavbar">
         <Nav className="container-fluid" id="myNavItem">
         <Nav.Link
-            className="FooterLink StandardFont"
+            className="FooterLink StandardFont email"
             href="mailto:triston.j.palacios@gmail.com?subject=Contact from Portfolio"
             id="myNavItem"
           >
