@@ -27,7 +27,7 @@ export default function AgeNbar({setComicMode, comicMode}){
           <Nav className="container-fluid" id="myNavItem">
             <Nav.Link className="AgeNav" href="/ageHome" id="myNavItem">Home</Nav.Link>
             
-            <Nav.Link className="AgeNav" href="#about" id= "myNavItem">About</Nav.Link>
+            <Nav.Link className="AgeNav" href="/blog" id= "myNavItem">Blog</Nav.Link>
             <Nav.Link className="AgeNav" href="#projects" id= "myNavItem">Projects</Nav.Link>
             <Nav.Link className="AgeNav" href="#ContactForm" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="AgeNav" href="agegallery" id= "myNavItem">Gallery</Nav.Link>

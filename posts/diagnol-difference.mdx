@@ -1,0 +1,264 @@
+---
+title: Diagonally Challenged
+date: 'May 27, 2022'
+description: Learn how to solve HackerRanks (Kind of)
+thumbnailUrl: /HackerPatrick.png
+tags: ['functions', 'javascript']
+---
+## For those TLDR Friends:
+
+Link to Hacker Rank: https://www.hackerrank.com/challenges/one-month-preparation-kit-diagonal-difference
+
+My Solution (in Node.js):
+ <SyntaxHighlighter language="javascript">
+ {`
+function diagonalDifference(arr) {
+    let n = arr.length
+    let diagOne = 0;
+    let diagTwo = 0;
+    for (let i=0;i<n;i++){
+      for(let j=0;j<n;j++){
+        if (i===j){
+          diagOne += arr[i][j];
+        }
+        if(i+j === n-1){
+          diagTwo += arr[i][j]
+        }
+      }
+    }
+  let difference = Math.abs(diagOne-diagTwo)
+  return difference
+}
+`}
+</SyntaxHighlighter>
+
+## For those more patient and or curious friends:
+
+Every now and then a HackerRank question really hits on that secret sauce.. That secret sauce that mixes the perfect amount of challenge and abstractness to make you feel a gamut of emotions like overwhelming doubt, crushing despair, insurmountable imposter syndrome, and like a genius all within a hellish 30-minute time span. 
+
+
+
+### SIDEBAR:
+ For those, not so acclimated to the Software Engineering world. HackerRank is a wonderful website where any software enginner can go to make themselves feel instantly worthless. How so? Well at the wonderful land of HackerRank, they have coding challenges that are designed specifically to make you wonder if you are the Patrick Star in the Bikini Bottom of your life. Really though, it's a site where programmers can take on challenging questions to determine their aptitude (generally) at solving challenging programming questions. Anyhow, fear not if you’re not understanding, because in the post I will be sharing one said question and translating the solution to you in a non-technical way. 
+
+ {<img src="../HackerPatrick.png"
+     alt="Markdown Monster icon"
+     style={{width:"50vw"}} />}
+
+### Anyhow
+ Today, as I was milling about, I stumbled upon one of those aforementioned HackerRank Questions with the aforementioned “Secret Sauce”.
+
+Here it is in the technical form (See below for plain speak version):
+
+`Given a square matrix, create a function to calculate the absolute difference between the sums of its diagonals.
+For example, the square matrix is shown below:
+1 2 3
+4 5 6
+9 8 9  
+The left-to-right diagonal = 1,5,6 . The right to left diagonal =3,5,9. Their absolute difference is 2. *The matrix will always be a perfect square but not always a 3x3`
+
+Function description:
+
+`diagonalDifference takes the following parameter:`
+
+`int arr[n][m]: an array of integers`
+
+Return
+`int: the absolute diagonal difference
+Input Format
+The first line contains a single integer,n, the number of rows and columns in the square matrix arr.
+Each of the next n lines describes a row, arr[i], and consists of n space-separated integers arr[i][j].`
+
+Constraints: 
+`-100 <= arr[i][j] <= 100`
+
+Output Format: 
+`Return the absolute difference between the sums of the matrix's two diagonals as a single integer.`
+
+#### Here the question is in plain speak:
+
+1.I give you a grid of numbers (that is always a perfect square)
+
+2.You create a function that calculates the sum of the diagonals.
+
+3.Then your function compares the sum of the diagonals 
+
+4.Your function gives me the Absolute Difference between the sums.
+
+
+Hopefully you read one of those versions and understand what we’re trying to accomplish here, but before we crack that nut, I want to elaborate on the brilliance of this question. 
+
+Computer science, as I see it, is a balance between math and communication. In reality, this HackerRank question to a mathematician or someone who studied geometry is fairly straightforward and represents a generally known relationship between the diagonal lines and their points on a graph.
+
+IF you are charting the points on a 3x3 graph, a positive diagonal will correspond to the spots at 
+[0,0]
+[1,1]
+[2,2]
+IF you are charting the points on a 3x3 graph, a negative diagonal will correspond to the spots at
+[0,2]
+[1,1]
+[2,0]
+<strong> Make sure the above math prinicpal makes sense before reading on. Tip: Focus on the relationship between the coordinates. </strong>
+
+** If you are confused why the graph is starting at [0,0] keep reading! 
+
+
+However, in computer science, this problem can be a little bit more tedious. In most cases, computer science happens in a list of numbers (Data scientists don't @ me, every data structure is some sort of list within a list. Kind of... )
+
+Below is an image of how a grid generally looks:
+ {<img src="../DiagGraph.png"
+     alt="Markdown Monster icon"
+     style={{width:"50vw"}} />}
+
+Below is an image of how a grid generally looks to a computer:
+
+[[1,2,3],[4,5,6],[7,8,9]]
+
+#### So, now why do I like this question?
+
+Well because it forces an engineer (such as myself) to take a real-world display and translate it into a digital realm. In my day to day, we typically don't do most of the things HackerRank asks of us, and that is why it is challenging (and annoying) when they present heavily abstracted challenges. But in this case, there are many cases where translating a grid to an array/matrix of numbers may be necessary and or generally helpful for visualizing what we are doing. A major challenge computer science creates is navigating within the disconnect that comes from making lines of code translate into manifestations that feel natural to our physical realm. 
+
+Maybe you’re calculating the sum of a diagonal for projections, or you’re making a tic tac toe game and need to be tracking inputs into a diagonal for a win condition, or maybe you’re just trying to flex on some Reddit goon by showing you can calculate diagonals programmatically. Either way, this HackerRank question poses a brain exercise with real applications. And if that wasn't enough, it actually takes it a step further by demonstrating why we use computers in the first place.  
+
+In the real world, humans (well most of them) are dumb. But that is okay because it's in our nature to be that way. Really, our brains never evolved to handle super complex mathematics because they evolved instead to create machines to do it for us. IF a human has a grid that is 1000x1000 with digits scattered among it, it would be implausible to do the calculations by hand. However, with a computer, it's barely an inconvenience. As a matter of fact, a computer could do millions if not more of these calculations in a few seconds, whereas it will take us until the heat death of our solar system to do even a fraction of the same work. Pretty neat for us I say!
+
+#### Okay so how do we solve this bad boy?
+
+ Well, we kind of already figured it out. 
+
+So let's say our grid is as before.
+
+Its 3x3 and looks like this
+
+1 2 3
+
+4 5 6
+
+7 8 9
+
+And for computer people
+
+[[1,2,3],[4,5,6],[7,8,9]]
+
+And we already know where the diagonal points/ indexes will be because we examined that earlier.
+
+So what else do we have to do? 
+
+Below we have some code as well as some comments that cover the next steps. Non-CS people please give this a go, I promise it will make sense. 
+
+
+#### QUICK SIDEBAR. We already established that to a computer this list looks like “[[1,2,3],[4,5,6],[7,8,9]]”
+But something a tad bit more intensive that any non-CS people will need to understand before going forward is the way the computer catalogs each of the locations of each array/number in the array. I know that likely sounds confusing but it's not.  
+
+Essentially there is one list, with three list in it.
+
+1.Big List = “[[1,2,3],[4,5,6],[7,8,9]]” 
+
+2.Sub List Zero = “[1,2,3]” 
+
+3.Sub List One = “[4,5,6]” 
+
+4.Sub List Two = “[7,8,9]” 
+
+SO what if you wanted the index(location) of the number five in the second list in the big list?
+
+WELL, we just the establish the list [4,5,6] is in the index spot 1 of the big list. So the first coordinate would be would be 1, and 5 is in the 1 index spot of that sub list so the second coordinate would be 1. 
+
+SO you could say “Hey COMPUTER! Give me the number that lives in the [1,1] spot of the array [[1,2,3],[4,5,6],[7,8,9]] ” and it would give you 5.
+
+Flash quiz!?!? WHAT WOULD TELL THE COMPUTER IF YOU WANTED TO GET BACK THE NUMBER 9 FROM THE ARRAY?
+
+Answer: Well, [7,8,9] is the 2nd index in the big list so the first coordinate is 2, and 9 is the 2nd index is the sub list so the answer would be [2,2]
+
+*Are you noticing a pattern with how this correlates to the coordinates on a graph? 
+
+#### SIDEBAR SIDEBAR:
+
+I know most of you are completely checked out by now… But unfortunately, I have to throw another layer of abstraction onto this index finding method I just taught you.. Sorry.
+
+When you want a computer to give you the digit in the location 2,2 of an array. You wouldn’t literally type ‘Computer give me the digit in the location [2,2] of this array’. You would type Array[2][2], and the computer would find that value. Do not be discouraged, Array[2][2] still translates into ‘hey computer find the number living in the 2nd index in the list that is in the 2nd index of the big list. ’ 
+
+#### Solution Time:
+##### NON-CS PEOPLE read the lines starting with "//"
+###### The lines that do not start with '//' are the actual code.
+ <SyntaxHighlighter language="javascript">
+
+{`//Non-CS people, this is a function. Essentially we’re saying is “Computer, keep track of the ability to do this function. 
+//Everytime I tell you ‘diagonalDifference and I feed you an array with it, do the following stuff to that array and give me back what the results are’”
+function diagonalDifference(arr) {
+//We need to find the length of the total array. 
+//Now this might be confusing because you may assume the length is 9, but that is incorrect.
+//Really the length of the array is 3, because its 1 array with 3 arrays in it, that have 3 numbers in each of them.
+//This is why the CS version of the grid looks like this “[[1,2,3],[4,5,6],[7,8,9]]”. 
+//We need the length because the math to find the negative diagonal coordinates requires it. You will see more below. 
+//COMPUTER let n (unitl we're out of this function) represent the length of the array I gave you.
+    let n = arr.length
+//Next we have to tell the computer to keep track of the SUM of those diagonals as they come. 
+//We need to create "variables" so that we can tell the computer what to keep track of.
+//So lets say diagonalOne = 0 (So the computer has a reference later.)
+    let diagOne = 0;
+//And diagonalTwo = 0.
+//We set them to zero because we know they will be numbers, and because we know we want to make sure they start empty, so the sum calculation works correctly. 
+    let diagTwo = 0;
+
+  //Non-CS people, I am going to do my best here to explain a ‘for’ loop but it may not make sense. That is okay, this is a little more intermediate, but loops are very common in coding and are worth trying to understand. Do your best. 
+//A "for" loop is in the simplest terms a loop that does something every single time the value of i (or whatever you want to call it) changes.
+//My for loop translates roughly into, 
+//let i(we could call this anything, i is common practice)=0; 
+//then stop looping when i is no longer less than n 
+//(remember n is the length of the array we’re feeding the function diagonalDifference so it translates into “Stop the loop when i is greater than 3 because the length of the array we are feeding the function is 3”) 
+//and finally, increment i by 1 every time you finish doing the code inside the curly brackets.
+  for (let i=0;i<n;i++){
+//We’re also going to loop through the smaller list in each list.. I know that probably sounds like nonsense.. 
+//But remember as I said before. This 3x3 grid is made up of “[[1,2,3],[4,5,6],[7,8,9]]” 
+//so we have to loop through the sub lists such as [1,2,3]
+//but at every stop along the way, we need to do some stuff. 
+//So here the loop is essentially doing the same thing 'Loop wise' but we’re declaring a new variable called j, so that the computer doesn't get confused about which loop to increment when it's finished doing what. 
+      for(let j=0;j<n;j++){
+//OKAY so now we are here.. The computer is programmatically looking at each value in each index and we need to tell it what to do while looking. SEE BELOW FOR ANIMATED EXAMPLE
+//SO ‘Hey COMPUTER if i === j then add the value living in that spot to the sum of diagOne. 
+//But why? Remember, as we talked about above, if i===j the means that the index the computer is looking at looks something like [1,1] or [2,2].
+// AND because we established earlier that the numbers in those indexes are always on the positive diagonal line, we can safely add them to the sum running count of diagOne’
+        if (i===j){
+          diagOne += arr[i][j];
+        }
+//IF the above wasnt true, then check if i+j === the length of the array -1. So if i is at 1 and j is at 1, and they added together equal 2, does that equal the length of the array(which is 3) - 1? 
+//If so then add the number living in that spot to the sum of the negative diagonal counter (diagTwo) 
+        if(i+j === n-1){
+          diagTwo += arr[i][j]
+        }
+      }
+    }
+//Because of the way these loops are set up the computer will go through the entire list and the sublists to check if each of the indexes match either of those IF statements.
+// IF neither of the IF statements come back true, they will simply move past that index. 
+//Once finished with all the loops, the computer will now come here to see what is next.
+
+//Now that we have the sum of the positive diagonal and the negative diagonal all added up, we just need to find the absolute difference between them.
+//In our case where our grid looks like
+//1 2 3
+//4 5 6
+//7 8 9
+
+//The sum of diagOne at this point will equal 15, because 1+5+9 = 15
+//And the sum of diagTwo at this point will equal 15, because 7+5+3 =15.
+//So what is the difference between these two numbers? 0 because |15-15| = 0
+ let difference = Math.abs(diagOne-diagTwo)
+//COMPUTER RETURN nothing to me except what the difference is between diagOne and diagTwo. 
+//In this case of the grid we just described. The computer will return "0", because it is the difference between the sums!
+ return difference
+}
+`}
+</SyntaxHighlighter>
+### FOR LOOP ANIMATED EXAMPLE
+{<img src="../ForLoopDiag.gif"
+     alt="Markdown Monster icon"
+     style={{width:"50vw"}} />}
+
+And that is it! You just solved the HackerRank question of how Diaganol Difference! 
+
+And even better, maybe you picked up on it, because the calculations we did were based on constant math principles, our function will scale with any size square grid you throw at it!  So if our computer could handle it, our function could tell us the sum of the diagonals in a grid of 1,000,000 x 1,000,000 all by following the simple loops we just told it to! Pretty SHWEET!
+
+Anyhow, adventure is calling me elsewhere! I hope you learned a lot, and if you didn't or you have a better solution (because of course you do).. Feel free to let me know in the comments or on LinkedIn if the comment section hasnt been launced yet :O . 
+
+Thank you and hopefully, I’ll see you soon! 
+

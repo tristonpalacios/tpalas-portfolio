@@ -27,7 +27,7 @@ export default function ComicNbar({setComicMode, comicMode}){
           <Nav className="container-fluid" id="myNavItem">
             <Nav.Link className="text-underline-hover" href="/" id="myNavItem">Home</Nav.Link>
             
-            <Nav.Link className="text-underline-hover" href="#about" id= "myNavItem">About</Nav.Link>
+            <Nav.Link className="text-underline-hover" href="/blog" id= "myNavItem">Blog</Nav.Link>
             <Nav.Link className="text-underline-hover" href="#projects" id= "myNavItem">Projects</Nav.Link>
             <Nav.Link className="text-underline-hover" href="#ContactForm" id= "myNavItem">Contact</Nav.Link>
             <Nav.Link className="text-underline-hover" href="gallery" id= "myNavItem">Gallery</Nav.Link>

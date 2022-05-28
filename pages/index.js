@@ -12,11 +12,13 @@ import AgeNbar from "../components/ageNavBar";
 import AgeAbout from "../components/ageAbout";
 import AgeProjects from "../components/ageProjects";
 import AgeContactForm from "../components/AgeContact";
+import Blog from "./blog";
 
 export default function Home() {
   useEffect(() => {
     import("bootstrap/dist/js/bootstrap");
   }, []);
+
 
   // const [comicMode, setComicMode] = useState(true);
 
@@ -97,7 +99,6 @@ export default function Home() {
         <div id="ContactForm">
           <ContactForm />
         </div>
-
         <footer className="text-center BoldFont">
           ©T.J.P. {new Date().getFullYear()}
         </footer>
@@ -106,4 +107,21 @@ export default function Home() {
       </div>
     </div>
   );
+}
+
+const getStaticProps = async () => {
+  const files = fs.readdirSync(path.join('posts'))
+  const posts = files.map(filename => {
+    const markdownWithMeta = fs.readFileSync(path.join('posts', filename), 'utf-8')
+    const { data: frontMatter } = matter(markdownWithMeta)
+    return {
+      frontMatter,
+      slug: filename.split('.')[0]
+    }
+  })
+  return {
+    props: {
+      posts
+    }
+  }
 }

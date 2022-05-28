@@ -12,9 +12,26 @@ body {
 
 .ComicApp{
   font-family: 'Titillium Web', sans-serif;
-  background-image: url("/PortfolioBack.png");
+  background-image: url("/PortfolioBack.png") !important;
   width: 100%;
+
 }
+.ComicBlog{
+  font-family: 'Titillium Web', sans-serif;
+  background-image: url("/PortfolioBack.png") !important;
+  width: 100%;
+  height: 100vh;
+}
+
+.ComicPosts{
+  margin: auto;
+  box-shadow: 5px 2px 2px black;
+}
+.ComicPosts:hover{
+  margin: auto;
+  box-shadow: 10px 4px 4px black;
+}
+
 .Gallery{
   font-family: 'Titillium Web', sans-serif;
   background-image: url("/PortfolioBack.png");
@@ -838,4 +855,9 @@ font-family: 'Bangers', 'Comic Neue';
   opacity: 1;
   transform: none;
   visibility: visible;
+}
+
+.BlogCard{
+  width: 90%;
+  margin: auto;
 }

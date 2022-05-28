@@ -13,7 +13,7 @@ import AgeAbout from "../components/ageAbout";
 import AgeProjects from "../components/ageProjects";
 import AgeContactForm from "../components/AgeContact";
 
-export default function ageHome () {
+export default function ageHome ({posts}) {
 
 
     return(
@@ -26,5 +26,6 @@ export default function ageHome () {
           <div id="ContactForm">
             <AgeContactForm />
           </div>
+          
         </main>) 
 }
