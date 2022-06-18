@@ -1,0 +1,269 @@
+---
+title: Binary Tree 101 Pt.1 (Traversal)
+date: 'June 16, 2022'
+description: Part one of a quick crashcourse on Binary Trees
+thumbnailUrl: /BinTree.png
+tags: ['functions', 'javascript']
+---
+
+## (Javascript) Data Structures 101: Binary Trees
+
+Many Software Engineers can attest to the fact that Binary Trees are a fan favorite interview question. So, in an effort to add my two cents and perhaps help us both learn them a little better, here is my Binary Tree 101 crash course (The first part of it at least).
+
+### What is a Binary Tree?
+
+Well, a binary tree is a variant of the tree data structure and is a “Binary Tree” if it meets the three following criteria
+
+1.Every node has AT MOST 2 Children
+
+2.The Tree has exactly 1 Root
+
+3.There is exactly 1 path between the root and any given node node
+
+### When are binary trees used in the real world?
+Typically Binary trees are used when decision-making computations can be boiled down to yes-no answers. So a few examples would be
+1. Sorting data – Is x bigger than y? 
+2. Decision Trees – Does it quack like a duck? If so, is it shaped like a duck?
+3. Routing tables – Is where you’re trying to get to < x or > x? Now is it < or > y?
+
+The best way to visualize practical uses in my mind is to think about situations where binary comparisons/evaluations are the driving factors in making a decision. 
+
+
+### Why are Binary Trees questions so popular in tech interviews?
+
+The internet will have many different answers for this, but from my experience, they are common due to their balance of abstraction, difficulty, and relatively quick implementation. 
+
+IF you know binary trees, setting them up and utilizing them can be done within 10 minutes which is a good time frame for a technical interview. IF you don’t; talking them out or whiteboarding them, can still decently illustrate your critical thinking skills to the interviewer.
+
+### Why Binary Trees and not Turnary or ‘N-ary’ trees?
+Binary is the most popular version of Trees because the algorithmic logic used to manipulate or navigate a Binary tree can be boiled down to simple “Yes” or “No” logic due to the nodes at most two children.
+
+### How do we create Binary Trees?
+
+ <SyntaxHighlighter language="javascript">
+  {`//Here we are creating our Node Class
+//Every Node is prepopulated with a val (passed into the function) that will be the value of the node
+//Every node is defaulted with the potential to have both a left and right node (Remember, Two Nodes its the most a “Binary” tree can have)
+//The potential connection nodes are defaulted to Null values so that if we never declare a connection, the node will not have one.
+class Node{
+  constructor(val){
+    this.val = val;
+    this.left = null;
+    this.right = null;
+  }
+}
+//Here I am manually creating 6 floating nodes. 
+//They currently have no connections.
+const a = new Node(1);
+const b = new Node(4);
+const c = new Node(6);
+const d = new Node(10);
+const e = new Node(34);
+const f = new Node(52);
+
+//Here I am establishing the tree by manually setting the left and right values of the parent nodes.
+//In doing this manually you have to be careful to make sure each node only has two children
+a.left = b;
+a.right = c;
+b.left = d;
+b.right = e;
+c.right = f;
+`}
+</SyntaxHighlighter>
+
+How our binary tree now looks to our computer
+
+<SyntaxHighlighter language="javascript">
+{`[
+  Node {
+    val: 1,
+    left: Node { val: 4, left: [Node], right: [Node] },
+    right: Node { val: 6, left: null, right: [Node] }
+  },
+  Node {
+    val: 4,
+    left: Node { val: 10, left: null, right: null },
+    right: Node { val: 34, left: null, right: null }
+  },
+  Node { val: 10, left: null, right: null },
+  Node { val: 34, left: null, right: null },
+  Node {
+    val: 6,
+    left: null,
+    right: Node { val: 52, left: null, right: null }
+  },
+  Node { val: 52, left: null, right: null }
+]
+`}
+</SyntaxHighlighter>
+
+How our Binary tree now looks to per the standard Tree rendering
+{<img src="../BinaryVisual.png"
+     alt="Render of our current Binary Tree"
+     style={{width:"50vw"}} />}
+
+## How do we traverse a Binary Tree?
+### Depth First Version
+
+In the below examples we will map out the values of the binary tree in a depth first manor. This means, we go down the depth (Top to bottom) of each of the branches and then switch to the next branch.
+Iterative Version:
+ <SyntaxHighlighter language="javascript">
+ {`//Declare your function
+const iterativeDepthFirstValues = (root) =>{
+//If there is no root, return an empty array, because there is no Tree.
+  if(root === null){
+    return [];
+  }
+//Declare empty resultArray, to have something to push the found values into
+  const resultArray = [];
+//create your stack. Here we are using a stack because of the fact of the single open end.
+//poot the root node into the stack to intiliaze the starting place.
+  const stack = [root];
+//While stack has an element in it, keep doing the below functions
+  while (stack.length > 0){
+// create a current variable to look at
+//.pop() returns a value, so stack.pop() will return to the current variable the removed element.
+//so in the first initial pop, current now === node A.
+    const current = stack.pop();
+//Here is where you would push whatever data you want to collect.
+//In this example, I am pushing the val of the current node into a result array. 
+//In the first push, we would be pushing the val of node A (1), into the result array
+    resultArray.push(current.val);
+//Here is where you are designating the order of your stack. 
+//Because I am checking the current.right, the right node will be pushed into the stack before the current one. 
+//NOTE because of the nature of the stack, the value push last into the stack, is the one that will be the next “Current” node. Remember, a stack is a one way data structure.
+//This is important to note because depending on your purpose of surveying a tree, the order of your data may be important. 
+//the IF statements here are essential. Without them, you will error out when the stack attempts to push a Right or Left that does not exist. 
+    if(current.right)stack.push(current.right);
+    if(current.left)stack.push(current.left);
+  }
+   console.log(resultArray)
+}
+itterativeDepthFirstValues(a)
+//OUTPUT : [ 1, 4, 10, 34, 6, 52 ]
+
+`}
+</SyntaxHighlighter>
+
+Recursive Version:
+<SyntaxHighlighter language="javascript">
+{`//declare function
+const recursiveDepthFirstValue = (root) =>{
+//base case (the case that will finally end the loop)
+if(root === null) return [];
+//the recursion call
+//this may be confusing on the outset, but essentially the “LeftValues” or “RightValues” is cataloging each value it comes along, and adding them to the “root.val,...leftValues,...rightValues” ONCE THE RECURSION hits the wall. 
+//I encourage you to console.log(root.val,...leftValues,...rightValues) for a peak under the hood.
+const leftValues = recursiveDepthFirstValue(root.left);
+const rightValues = recursiveDepthFirstValue(root.right);
+//console.log(root.val,...leftValues,...rightValues)
+return [root.val,...leftValues,...rightValues]
+}
+console.log(recursiveDepthFirstValue(a))
+//For reference the below is what the [root.val,...leftValues,...rightValues] is at each loop. Incase you are unable to console.log yourself atm.
+//10
+//34
+//4 10 34
+//52
+//6 52
+//1 4 10 34 6 52
+`}
+</SyntaxHighlighter>
+
+{<img src="../DepthAnimation.gif"
+     alt="Render of our current Binary Tree"
+     style={{width:"50vw"}} />}
+
+### Why knowing traversal is useful and a few tips to keep in mind
+
+Without knowing how to properly traverse a Binary Tree, you will be unable to get any benefit from the data structure. Any form of searching, editing, summation or anything else will require you to have a strong foundational knowledge of getting around the tree.
+
+Few tips to keep in mind when trying to traverse a tree:
+
+1. Is the tree Binary? If not, you will have to use different methods. Remember what makes Binary Trees special is that they can be manipulated with Yes/No logic due to their limitations. 
+2. While Binary Trees are traditionally rendered through a “Tree”, this is done mostly to help visualize them. IF you find it is easier to learn the way a computer sees it (See above for example) that is completely fine. Either way, pick a visual and memorize it. Once you can see what you’re trying to traverse in your mind you will have a much easier time traversing it. 
+3. Until you’re very familiar with traversing a binary tree, I would avoid using a recursive approach. While Recursion is elegant and can look great in an interview, it is harder to learn the iterative after recursive, whereas it’s not as difficult vice versa.
+4. If you’re struggling to remember your code for traversal, I have found pseudo coding the steps works wonders. Traversing Binary Trees seems daunting but is quite simple so simply pseudo-coding out the steps will likely get your brian on the right track.
+
+pseudo code example
+
+4(a). First check if there is a tree, if not return out of function, if so, see below.
+
+4(b). Create a stack to push the values you pass into. Without some middle stack or queue, you will be unable to keep track of where you are and what is possible next.
+
+4(c). While there is something available to be pushed into the stack:
+
+4(c)(i). Check if the current item has children
+
+4(c)(ii). IF it has children push the current out and move the children to current
+
+4(d). Depending on your task, utilize the current as your validator for your task.
+
+4(d)(i). For example: If looking for a target, check conditionally if the current is the target, if so return there. 
+
+### Breadth First Traversal
+
+#### What is a breadth-first traversal?
+
+In contrast to a depth-first approach, where we move down the starting node path all the way to its leaf using a stack; A breadth-first approach moves in “Waves” level to level in a tree typically using a queue data structure. 
+
+### Depth vs Breadth: Which is better?
+Both Depth and Breadth serve better in certain situations. Typically a Depth-first approach is utilized when memory is a concern and if the target node is far from the root. Breadth-first is much more useful when trying to find a solution in a specific part of a tree and if you’re uncertain of the depth of the tree. 
+{<img src="../DepthVBreadth.png"
+     alt="Render of our Breadth First approach vs Depth First"
+     style={{width:"50vw"}} />}
+
+### Breadth-First Traversal Implementation
+
+<SyntaxHighlighter language="javascript">
+{`
+const breadthFirstValues = (root) =>{
+// if the root is null, there is no tree, return out.
+if(root === null) return [];
+//initialize the queue with the first value (the root node)
+const queue = [root];
+// create array to store values as you find them
+const values = [];
+//While the queue has something in it do the following code
+while(queue.length > 0){
+//set current to the first element from the queue 
+//.shift() removes the first element from the queue and returns its value
+  const current = queue.shift();
+//depending on purpose of traversal this will change
+//here I am simply pushing the values of each node I visit into my values array.
+  values.push(current.val);
+//For information on why were are using a queue, see below code block
+//if current.left exist, push that bad boy into the queue
+  if(current.left != null) queue.push(current.left)
+//if current.rightexist, push that bad boy into the queue
+  if(current.right != null) queue.push(current.right)
+}
+return values
+}
+breadthFirstValues(a)
+//Output [ 1, 4, 6, 10, 34, 52 ]
+`}
+
+</SyntaxHighlighter>
+
+### Why does Breadth-First use a queue?
+In contrast to a Depth-first that uses a stack resulting in a last in first out approach (which creates the depth effect), Breadth First is tracking the first in first out nodes to ensure that the nodes discovered first are the first explored. Breadth-first starts at the first node and adds all nodes from the outgoing edges to the queue (these nodes have a single distance from their source). You then take the next element from the queue, visit it and put all its outgoing unvisited nodes at the end of the queue. You repeat until the queue is empty which creates the wave-like approach you see illustrated above.
+
+### Can Breadth-First be done recursively?
+It possibly could but it would be impractical. Realistically using a queue and a recursive approach are counter-intuitive for reasons that are a little out of the scope of this crash course. 
+
+## END OF PART ONE
+
+psst.. Thank you for all the support on the blog! I have a few more blogs in the pipeline and hope to have them out ASAP. Pt.2 of this crash course is up next,then a post about the "Axe Man" of New Orleans, then a General Assembly (Coding Bootcamp) retrospective, and then pt.3 of this crashcourse. Stay tuned for more and thank you again for the support! 
+
+pssst.... pssst..... I forgot! Reach out to me on LinkedIn with any comments, concerns, or questions! I would love to hear from you! [Click here to go to my LinkedIn][1] 
+
+[1]: https://www.linkedin.com/in/tristonpalacios/
+
+
+
+
+
+
+
+
