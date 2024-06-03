@@ -2,7 +2,7 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
-import Image from "next/image";
+import { Image } from "react-bootstrap";
 import Navbar from "react-bootstrap/Navbar";
 import Nav from "react-bootstrap/Nav";
 
@@ -41,8 +41,7 @@ const Blog = ({ posts }) => {
                     src={post.frontMatter.thumbnailUrl}
                     className="img-fluid mt-1 rounded-start"
                     alt="thumbnail"
-                    width={500}
-                    height={400}
+                    fluid
                     objectFit="cover"
                   />
                 </div>

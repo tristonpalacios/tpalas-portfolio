@@ -1,5 +1,5 @@
 import Head from "next/head";
-import Image from "next/image";
+import { Image } from "react-bootstrap";
 import { useEffect } from "react";
 import Projects from "./projects";
 import About from "./about";
@@ -24,11 +24,9 @@ export default function Home() {
       <main className="ComicApp">
         <ComicNbar />
         <Image
-          src="/../public/images/HomePagePhoto.png"
+          src="images/HomePagePhoto.png"
           alt="Comic Rendition of introduction to self"
-          width={2400}
-          height={954}
-          quality={100}
+          fluid
           priority
         />
 
