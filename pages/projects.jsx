@@ -34,7 +34,7 @@ export default function Projects() {
               <Carousel variant="dark">
                 <Carousel.Item>
                   <Image
-                    src="/Dig.gif"
+                    src="images/Dig.gif"
                     alt="Picture of the Monica the Mole"
                     width={500}
                     height={500}
@@ -43,7 +43,7 @@ export default function Projects() {
                 </Carousel.Item>
                 <Carousel.Item>
                   <Image
-                    src="/Farmer.gif"
+                    src="images/Farmer.gif"
                     alt="Picture of the Farmer Joe"
                     width={500}
                     height={500}
@@ -52,7 +52,7 @@ export default function Projects() {
                 </Carousel.Item>
                 <Carousel.Item>
                   <Image
-                    src="/Whack.png"
+                    src="images/Whack.png"
                     alt="Picture of WaM game board"
                     width={500}
                     height={500}
@@ -67,15 +67,15 @@ export default function Projects() {
                 <h1 className="card-title">Whack-a-Mole!</h1>
                 <p className="card-text">
                   <Image
-                    src="/jslogo.png"
+                    src="images/jslogo.png"
                     alt="JavaScript"
                     width={70}
                     height={50}
                     quality="100"
                   />
-                  <Image src="/HTML.webp" alt="HTML" width={50} height={50} />{" "}
-                  <Image src="/CSS.png" alt="CSS" width={50} height={50} />
-                  <Image src="/Git.png" alt="Git Hub" width={50} height={50} />
+                  <Image src="images/HTML.webp" alt="HTML" width={50} height={50} />{" "}
+                  <Image src="images/CSS.png" alt="CSS" width={50} height={50} />
+                  <Image src="images/Git.png" alt="Git Hub" width={50} height={50} />
                 </p>
                 <h3 className="card-text StandardFont">
                   Nothing better than turning a brutal reality of the prarie
@@ -137,7 +137,7 @@ export default function Projects() {
                   </p> */}
 
                 <Image
-                  src="/Node.png"
+                  src="images/Node.png"
                   alt="Node.js"
                   width={50}
                   height={50}
@@ -145,14 +145,14 @@ export default function Projects() {
                 />
 
                 <Image
-                  src="/postgreSQL.png"
+                  src="images/postgreSQL.png"
                   alt="Mongo Db"
                   width={50}
                   height={50}
                 />
-                <Image src="/Hero.png" alt="Heroku" width={50} height={50} />
+                <Image src="images/Hero.png" alt="Heroku" width={50} height={50} />
                 <Image
-                  src="/MarvelLogo.png"
+                  src="images/MarvelLogo.png"
                   alt="Heroku"
                   width={70}
                   height={50}
@@ -168,15 +168,10 @@ export default function Projects() {
                 <ul>
                   <li>Use of the official Marvel API</li>
                   <li>
-                    Fully Implemted User Auth System, including data encryption
+                    Fully Implemented User Auth System, including data encryption
                   </li>
                   <li>PostgreSQL implementation</li>
                 </ul>
-                <Button className="varButton">
-                  <Link href="https://virtual-marvel-encyclopedia.herokuapp.com/users/new">
-                    Check it out!
-                  </Link>
-                </Button>
 
                 <span className="paddingButton">
                   <Button className="varButton">
@@ -191,7 +186,7 @@ export default function Projects() {
               <Carousel variant="dark">
                 <Carousel.Item>
                   <Image
-                    src="/VMEL.png"
+                    src="images/VMEL.png"
                     alt="Virtual Marvel Encyclopedia sign in"
                     width={600}
                     height={600}
@@ -201,7 +196,7 @@ export default function Projects() {
                 </Carousel.Item>
                 <Carousel.Item>
                   <Image
-                    src="/VMELR.png"
+                    src="images/VMELR.png"
                     alt="VME results page"
                     width={600}
                     height={600}
@@ -211,7 +206,7 @@ export default function Projects() {
                 </Carousel.Item>
                 <Carousel.Item>
                   <Image
-                    src="/VMELS.png"
+                    src="images/VMELS.png"
                     alt="VME Search Page"
                     quality="100"
                     className="overflow-hidden ProjectImage"
@@ -250,14 +245,14 @@ export default function Projects() {
             <Carousel variant="dark">
               <Carousel.Item>
                 <Image
-                  src="/PP.gif"
+                  src="images/PP.gif"
                   alt="Party People Logo"
                   className=" darkBackground overflow-hidden ProjectImage"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/hype.gif"
+                  src="images/hype.gif"
                   alt="Picture of the Farmer Joe"
                   width={600}
                   height={600}
@@ -266,7 +261,7 @@ export default function Projects() {
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/pphome.png"
+                  src="images/pphome.png"
                   alt="Picture of WaM game board"
                   width={600}
                   height={600}
@@ -280,25 +275,25 @@ export default function Projects() {
               <h1 className="card-title">Party People</h1>
               <p className="card-text">
                 <Image
-                  src="/REACT.png"
+                  src="images/REACT.png"
                   alt="REACT"
                   width={50}
                   height={50}
                   quality="100"
                 />
                 <Image
-                  src="/mongoDb.jpeg"
+                  src="images/mongoDb.jpeg"
                   alt="Mongo Db"
                   width={50}
                   height={50}
                 />{" "}
                 <Image
-                  src="/postman.webp"
+                  src="images/postman.webp"
                   alt="Postman"
                   width={50}
                   height={50}
                 />
-                <Image src="/netlify.png" alt="MapBox" width={50} height={50} />
+                <Image src="images/netlify.png" alt="MapBox" width={50} height={50} />
               </p>
               <h3 className="card-text">
                 Are you a party person? Have you ever been at home and wondered
@@ -361,17 +356,17 @@ export default function Projects() {
                   </p> */}
 
               <Image
-                src="/Swift.png"
+                src="images/Swift.png"
                 alt="Swift"
                 width={50}
                 height={50}
                 quality="100"
               />
 
-              <Image src="/Realm.svg" alt="Realm" width={50} height={50} />
-              <Image src="/XCode.png" alt="X Code" width={50} height={50} />
+              <Image src="images/Realm.svg" alt="Realm" width={50} height={50} />
+              <Image src="images/XCode.png" alt="X Code" width={50} height={50} />
               <Image
-                src="/procreate.png"
+                src="images/procreate.png"
                 alt="Pro Create"
                 width={50}
                 height={50}
@@ -414,7 +409,7 @@ export default function Projects() {
             <Carousel variant="dark">
               <Carousel.Item>
                 <Image
-                  src="/Petit Ami Mock Up.png"
+                  src="images/Petit Ami Mock Up.png"
                   alt="Petit Ami Mock Up"
                   width={700}
                   height={700}
@@ -424,7 +419,7 @@ export default function Projects() {
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/TeenEat.gif"
+                  src="images/TeenEat.gif"
                   alt="VME results page"
                   width={700}
                   height={700}
@@ -434,7 +429,7 @@ export default function Projects() {
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/BabySleep.gif"
+                  src="images/BabySleep.gif"
                   alt="VME Search Page"
                   quality="100"
                   className="ProjectImage"
@@ -472,14 +467,14 @@ export default function Projects() {
             <Carousel variant="dark">
               <Carousel.Item>
                 <Image
-                  src="/LMS Home.png"
+                  src="images/LMS Home.png"
                   alt="LMS Home Screen"
                   className=" darkBackground overflow-hidden ProjectImage"
                 />
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/LMS Figma.png"
+                  src="images/LMS Figma.png"
                   alt="LMS Figma File"
                   width={600}
                   height={600}
@@ -488,7 +483,7 @@ export default function Projects() {
               </Carousel.Item>
               <Carousel.Item>
                 <Image
-                  src="/LMS Modules.png"
+                  src="images/LMS Modules.png"
                   alt="Picture of LMS Module Page"
                   width={600}
                   height={600}
@@ -503,25 +498,25 @@ export default function Projects() {
               <h1 className="card-title">Learning Management System </h1>
               <p className="card-text">
                 <Image
-                  src="/REACT.png"
+                  src="images/REACT.png"
                   alt="REACT"
                   width={50}
                   height={50}
                   quality="100"
                 />
                 <Image
-                  src="/mongoDb.jpeg"
+                  src="images/mongoDb.jpeg"
                   alt="Mongo Db"
                   width={50}
                   height={50}
                 />{" "}
                 <Image
-                  src="/Node.png"
+                  src="images/Node.png"
                   alt="Node"
                   width={50}
                   height={50}
                 />
-                <Image src="/figma.webp" alt="MapBox" width={50} height={50} />
+                <Image src="images/figma.webp" alt="MapBox" width={50} height={50} />
               </p>
               <h3 className="card-text">
                 Created as part of the 2022 International Hackathon.

@@ -125,7 +125,7 @@ export default function ContactForm() {
         <div className="col-md-6 ContactForm">{renderSendButton()}</div>
         <div className="col-md-6 PhotoArea">
           <Image
-            src="/TJPSignal.png"
+            src="images/TJPSignal.png"
             alt="Tjp Signal"
             quality="100"
             className="overflow-hidden contactImage "

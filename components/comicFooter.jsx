@@ -29,7 +29,7 @@ export default function Footer() {
             id="GitHub Link"
           >
             <Image
-              src="/gitHubIcon.webp"
+              src="images/gitHubIcon.webp"
               alt="Github Link"
               width={50}
               height={50}
@@ -42,7 +42,7 @@ export default function Footer() {
             id="LinkedIn Link"
           >
             <Image
-              src="/linkedIn.png"
+              src="images/linkedIn.png"
               alt="LinkedIn Link"
               width={50}
               height={50}
@@ -55,7 +55,7 @@ export default function Footer() {
             id="myNavItem"
           >
             <Image
-              src="/Insta.png"
+              src="images/Insta.png"
               alt="Ghost kitchen logo"
               width={50}
               height={50}

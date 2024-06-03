@@ -2,9 +2,6 @@ import styles from "../styles/About.module.css";
 import { Image } from "react-bootstrap";
 import { Card, Row, Col, Button, Carousel, Modal } from "react-bootstrap";
 import { useState } from "react";
-import Lightbox from "react-awesome-lightbox";
-// You need to import the CSS only once
-import "react-awesome-lightbox/build/style.css";
 import Link from "next/link";
 import GalleryNbar from "../components/comicGalleryNav";
 
@@ -140,7 +137,7 @@ export default function Contact() {
     <div className="Container">
         <div className="galleryTitle">
             <Image
-            src="/Visions.png"
+            src="images/Visions.png"
             alt="Abstract Dog"
             quality="100"
             className="w-100 mb-4" 
@@ -150,7 +147,7 @@ export default function Contact() {
     <div className="row">
       <div className="col-lg-4 col-md-12 mb-4 mb-lg-0">
           <Image
-            src="/SlothPic.png"
+            src="images/SlothPic.png"
             alt="Viridis Sloth"
             width={500}
             height={600}
@@ -161,7 +158,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/AbstractDog.png"
+            src="images/AbstractDog.png"
             alt="Abstract Dog"
             width={600}
             height={400}
@@ -171,7 +168,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(1); handleShow();}}
           />
            <Image
-            src="/Tac the Tic.png"
+            src="images/Tac the Tic.png"
             alt="Tac the Tic"
             width={600}
             height={600}
@@ -181,7 +178,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(2); handleShow();}}
           />
           <Image
-            src="/notSus.png"
+            src="images/notSus.png"
             alt="Its not sustainable pop art"
             width={500}
             height={500}
@@ -192,7 +189,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/vLogo.png"
+            src="images/vLogo.png"
             alt="Viridis Logo"
             width={600}
             height={600}
@@ -202,7 +199,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(4); handleShow();}}
           />
           <Image
-            src="/me.png"
+            src="images/me.png"
             alt="Me artist rendering"
             width={600}
             height={600}
@@ -212,7 +209,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(5); handleShow();}}
           />
           <Image
-            src="/Tom the Toe.png"
+            src="images/Tom the Toe.png"
             alt="Tom the toe"
             width={600}
             height={600}
@@ -222,7 +219,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(6); handleShow();}}
           />
           <Image
-            src="/ViridisPanda.png"
+            src="images/ViridisPanda.png"
             alt="Viridis Mascot"
             width={800}
             height={800}
@@ -232,7 +229,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(7); handleShow();}}
           />
           <Image
-            src="/Render.jpg"
+            src="images/Render.jpg"
             alt="Viridis Sketches"
             width={800}
             height={800}
@@ -242,7 +239,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(8); handleShow();}}
           />
           <Image
-            src="/MaskMock.png"
+            src="images/MaskMock.png"
             alt="Viridis Sketches"
             width={500}
             height={500}
@@ -255,7 +252,7 @@ export default function Contact() {
         </div>
         <div className="col-lg-4 mb-4 mb-lg-0">
           <Image
-            src="/ViridisPoster.png"
+            src="images/ViridisPoster.png"
             alt="Viridis Kickstarted Poster"
             width={600}
             height={900}
@@ -266,7 +263,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/Cyclop.png"
+            src="images/Cyclop.png"
             alt="Abstract Dog"
             width={500}
             height={600}
@@ -277,7 +274,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/Ghost.jpeg"
+            src="images/Ghost.jpeg"
             alt="Ghost kitchen logo"
             width={500}
             height={500}
@@ -287,7 +284,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(12); handleShow();}}
           />
           <Image
-            src="/BanditRun.png"
+            src="images/BanditRun.png"
             alt="Bandit Run"
             width={500}
             height={300}
@@ -297,7 +294,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(13); handleShow();}}
           />
           <Image
-            src="/SynctLogo.jpg"
+            src="images/SynctLogo.jpg"
             alt="Synct Logo"
             width={500}
             height={500}
@@ -307,7 +304,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(14); handleShow();}}
           />
           <Image
-            src="/health.gif"
+            src="images/health.gif"
             alt="3 hearts animated"
             width={500}
             height={300}
@@ -317,7 +314,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(15); handleShow();}}
           />
           <Image
-            src="/CactusOwl.jpg"
+            src="images/CactusOwl.jpg"
             alt="Cactus on Owl"
             width={500}
             height={800}
@@ -327,7 +324,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(16); handleShow();}}
           />
           <Image
-            src="/AnimalFarm.png"
+            src="images/AnimalFarm.png"
             alt="Monica the Mole (ANIMAL FARM VARIANT)"
             width={500}
             height={600}
@@ -337,7 +334,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(17); handleShow();}}
           />
           <Image
-            src="/GraveStone.png"
+            src="images/GraveStone.png"
             alt="Farmer (ANIMAL FARM VARIANT)"
             width={500}
             height={600}
@@ -349,7 +346,7 @@ export default function Contact() {
         </div>
         <div className="col-lg-4 mb-4 mb-lg-0">
           <Image
-            src="/Papgo.jpeg"
+            src="images/Papgo.jpeg"
             alt="Room animation"
             width={500}
             height={500}
@@ -359,7 +356,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(19); handleShow();}}
           />
           <Image
-            src="/Room.gif"
+            src="images/Room.gif"
             alt="Room animation"
             width={600}
             height={600}
@@ -370,7 +367,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/cbCar.png"
+            src="images/cbCar.png"
             alt="Camelback Carwash Logo"
             width={600}
             height={600}
@@ -381,7 +378,7 @@ export default function Contact() {
           />
 
           <Image
-            src="/SunnySide.png"
+            src="images/SunnySide.png"
             alt="Sunny Side Logo"
             width={500}
             height={500}
@@ -391,7 +388,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(22); handleShow();}}
           />
           <Image
-            src="/Flowers.png"
+            src="images/Flowers.png"
             alt="Viridis Flower Pot"
             height={60}
             quality="100"
@@ -400,7 +397,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(23); handleShow();}}
           />
           <Image
-            src="/Shady.png"
+            src="images/Shady.png"
             alt="Shady Cartoon"
             width={500}
             height={500}
@@ -410,7 +407,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(24); handleShow();}}
           />
           <Image
-            src="/Beanstalk.png"
+            src="images/Beanstalk.png"
             alt="Viridis Kickstarted Poster"
             width={600}
             height={900}
@@ -420,7 +417,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(25); handleShow();}}
           />
           <Image
-            src="/Wind.gif"
+            src="images/Wind.gif"
             alt="Windmill Gif"
             width={600}
             height={600}
@@ -430,7 +427,7 @@ export default function Contact() {
             onClick={() => { setImgIndex(26); handleShow();}}
           />
           <Image
-            src="/SantaAndFoggy.png"
+            src="images/SantaAndFoggy.png"
             alt="Foggy with Santa"
             width={600}
             height={600}
@@ -443,7 +440,6 @@ export default function Contact() {
 
       </div>
       <Modal show={show} onHide={handleClose}>
-        <Lightbox images={images} startIndex={imgIndex} onClose={handleClose}></Lightbox>
         </Modal>
       </div>
       </div>

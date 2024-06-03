@@ -14,7 +14,7 @@ export default function Skills() {
         <Card className="SkillBoxTwo overflow-hidden">
           <h1 className="Bangers CenterText ">Composite:</h1>
           <Image
-            src="/HeroRender.png"
+            src="images/HeroRender.png"
             alt="Hero Render of self"
             width={250}
             height={700}
@@ -46,31 +46,31 @@ export default function Skills() {
           <h1 className="SuperPowerTitle mx-auto">Super-Powers:</h1>
 
           <div className="SuperPowerOne">
-            <Image src="/REACT.png" alt="React" className="skillPhoto" />
+            <Image src="images/REACT.png" alt="React" className="skillPhoto" />
           </div>
           <div className="SuperPowerTwo">
-            <Image src="/Swift.png" alt="Swift" className="skillPhoto" />
+            <Image src="images/Swift.png" alt="Swift" className="skillPhoto" />
           </div>
           <div className="SuperPowerThree">
-            <Image src="/pyLg.png" alt="Python" className="skillPhoto" />
+            <Image src="images/pyLg.png" alt="Python" className="skillPhoto" />
           </div>
           <div className="SuperPowerFour">
-            <Image src="/Realm.svg" alt="Node.js" className="skillPhoto" />
+            <Image src="images/Realm.svg" alt="Node.js" className="skillPhoto" />
           </div>
           <div className="SuperPowerFive">
-            <Image src="/postgreSQL.png" alt="Python" className="skillPhoto" />
+            <Image src="images/postgreSQL.png" alt="Python" className="skillPhoto" />
           </div>
           <div className="SuperPowerSix">
-            <Image src="/mongoDb.jpeg" alt="MongoDb" width={120} />
+            <Image src="images/mongoDb.jpeg" alt="MongoDb" width={120} />
           </div>
           <div className="SuperPowerSeven">
-            <Image src="/Node.png" alt="Python" className="skillPhoto" />
+            <Image src="images/Node.png" alt="Python" className="skillPhoto" />
           </div>
           <div className="SuperPowerEight">
-            <Image src="/Dj.png" alt="Python" className="skillPhoto" />
+            <Image src="images/Dj.png" alt="Python" className="skillPhoto" />
           </div>
           <div className="SuperPowerNine">
-            <Image src="/Office.png" alt="Python" className="skillPhoto" />
+            <Image src="images/Office.png" alt="Python" className="skillPhoto" />
           </div>
         </Card>
         <Card className="SkillBoxFive overflow-hidden">

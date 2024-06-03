@@ -120,7 +120,7 @@ export default function AgeContactForm() {
         <div className="col-md-6 ContactForm">{renderSendButton()}</div>
         <div className="col-md-6 PhotoArea">
           <Image
-            src="/randomart.png"
+            src="images/randomart.png"
             alt="Tjp Signal"
             quality="100"
             className="overflow-hidden contactImage "
